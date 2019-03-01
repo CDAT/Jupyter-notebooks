@@ -211,10 +211,10 @@ def plot_portrait(
     if plotTitle:
         plot_title = vcs.createtext()
         plot_title.x = .5
-        plot_title.y = min(SET.y2 + 0.05, 0.99)
+        plot_title.y = (SET.y2 + 1) / 2.
         plot_title.height = 30
         plot_title.halign = 'center'
-        plot_title.valign = 'bottom'
+        plot_title.valign = 'half'
         plot_title.color = 'black'
         plot_title.string = plotTitle
         x.plot(plot_title)
