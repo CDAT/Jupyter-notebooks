@@ -11775,15 +11775,25 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Taylor-Diagram">Taylor Diagram<a id="top" /><a class="anchor-link" href="#Taylor-Diagram">&#182;</a></h1><p>This turorial is for creating Taylor Diagram using <a href="https://uvcdat.llnl.gov">UV-CDAT</a>'s VCS.</p>
+<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Taylor-Diagram" data-toc-modified-id="Taylor-Diagram-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Taylor Diagram<a id="top"></a></a></span></li><li><span><a href="#Contents:" data-toc-modified-id="Contents:-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Contents:</a></span></li><li><span><a href="#Create-VCS-canvas" data-toc-modified-id="Create-VCS-canvas-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Create VCS canvas<a id="vcs"></a></a></span></li><li><span><a href="#Prepare-input-data" data-toc-modified-id="Prepare-input-data-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Prepare input data<a id="input"></a></a></span></li><li><span><a href="#Reference-Line" data-toc-modified-id="Reference-Line-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Reference Line<a id="ref_line"></a></a></span></li><li><span><a href="#Markers" data-toc-modified-id="Markers-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Markers<a id="markers"></a></a></span></li><li><span><a href="#Alternative-way-of-setting-makers" data-toc-modified-id="Alternative-way-of-setting-makers-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Alternative way of setting makers<a id="markers2"></a></a></span></li><li><span><a href="#Connecting-line-between-dots" data-toc-modified-id="Connecting-line-between-dots-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>Connecting line between dots<a id="lines"></a></a></span></li><li><span><a href="#Grouping-using-split-lines" data-toc-modified-id="Grouping-using-split-lines-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Grouping using split lines<a id="lines2"></a></a></span></li><li><span><a href="#Legend" data-toc-modified-id="Legend-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Legend<a id="legend"></a></a></span></li><li><span><a href="#Additional-Axes" data-toc-modified-id="Additional-Axes-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>Additional Axes<a id="axes"></a></a></span></li><li><span><a href="#Two-quadrans-Taylor-Diagram" data-toc-modified-id="Two-quadrans-Taylor-Diagram-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>Two quadrans Taylor Diagram<a id="2quad"></a></a></span></li><li><span><a href="#Controllable-components" data-toc-modified-id="Controllable-components-13"><span class="toc-item-num">13&nbsp;&nbsp;</span>Controllable components<a id="comp"></a></a></span></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Taylor-Diagram">Taylor Diagram<a id="top" /><a class="anchor-link" href="#Taylor-Diagram">&#182;</a></h1><p>This turorial is for creating Taylor Diagram using <a href="https://uvcdat.llnl.gov">CDAT</a>'s VCS.</p>
 <p>Taylor diagrams are mathematical diagrams designed to graphically indicate which of several approximate representations (or models) of a system, process, or phenomenon is most realistic. This diagram, invented by Karl E. Taylor in 1994 (published in 2001) facilitates the comparative assessment of different models. It is used to quantify the degree of correspondence between the modeled and observed behavior in terms of three statistics: the Pearson correlation coefficient, the root-mean-square error (RMSE) error, and the standard deviation. Taylor diagrams have widely been used to evaluate models designed to study climate and other aspects of Earth’s environment. [See <a href="https://en.wikipedia.org/wiki/Taylor_diagram#cite_note-8">Wiki</a> and <a href="http://onlinelibrary.wiley.com/doi/10.1029/2000JD900719/abstract">Taylor (2001)</a> for details]</p>
 <p>Reference: <a href="http://onlinelibrary.wiley.com/doi/10.1029/2000JD900719/abstract">Taylor, K. E. 2001: Summarizing multiple aspects of model performance in a single diagram. Journal of Geophysical Research, 106(D7): 7183-7192</a></p>
-<p>© Software was developed by Charles Dutriaux and UVCDAT team, and tutorial was written by Charles Dutriaux and Jiwoo Lee. (18 Sep. 2017)</p>
-<p>Used environment version in this tutorial:</p>
+<p>The CDAT software was developed by LLNL. This tutorial was written by Charles Doutriaux and Jiwoo Lee  (18 Sep. 2017). This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.</p>
+<p>Environment versions used in this tutorial:</p>
 <ul>
-<li>uvcdat 2.12</li>
+<li>cdat 2.12</li>
 <li>vcs 2.12</li>
-<li>mesalib 17.2.0</li>
+<li>mesalib 17.2.0
+<a href="Taylor_Diagrams.ipynb">Download the Jupyter Notebook</a></li>
 </ul>
 
 </div>
