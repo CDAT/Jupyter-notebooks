@@ -3,8 +3,6 @@ layout: default
 title: EzTemplates Tutorial
 ---
 
-# EzTemplates Tutorial
-[download iPython Notebook](EzTemplates.ipynb)
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -11782,8 +11780,11 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Ez-Templates">Ez Templates<a id="top" /><a class="anchor-link" href="#Ez-Templates">&#182;</a></h1><p>This tutorial shows how to easily create templates for <a href="https://cdat.llnl.gov">CDAT</a>'s VCS</p>
-<p>© Software was developed by Charles Doutriaux and CDAT team, and tutorial was written by Charles Doutriaux.</p>
+<h1 id="Ez-Templates">Ez Templates<a id="top" /><a class="anchor-link" href="#Ez-Templates">&#182;</a></h1><p>This tutorial shows how to easily create templates for <a href="https://cdat.llnl.gov">CDAT</a>'s VCS.</p>
+<p>The CDAT software was developed by LLNL. This tutorial was written by Charles Doutriaux. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.</p>
+<ul>
+  <li><a href="EzTemplates.ipynb">Download the Jupyter notebook</a></li>
+  </ul>
 
 </div>
 </div>
@@ -11792,13 +11793,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Table-Of-Content">Table Of Content<a href="toc" /><a class="anchor-link" href="#Table-Of-Content">&#182;</a></h1><ul>
+<h1 id="Table-Of-Content">Table of Contents<a href="toc" /><a class="anchor-link" href="#Table-Of-Content">&#182;</a></h1><ul>
 <li><a href="#intro">Introduction</a></li>
-<li><a href="#setup">Setting Up The notebook</a></li>
-<li><a href="#basic">Creating Templates for a 3x2 Canvas</a></li>
+<li><a href="#setup">Setting up the notebook</a></li>
+<li><a href="#basic">Creating templates for a 3x2 canvas</a></li>
 <li><a href="#specific_template">Accessing a specific template</a></li>
 <li><a href="#local_legend">Local legend</a></li>
-<li><a href="#defaults">Controling the aspect</a><ul>
+<li><a href="#defaults">Controlling the aspect</a><ul>
 <li><a href="#base_template">Base template</a></li>
 <li><a href="#margins">Margins around the plots</a></li>
 <li><a href="#spacing">Spacing between subplots</a></li>
@@ -11812,8 +11813,8 @@ div#notebook {
 </ul>
 </li>
 </ul>
-<h1 id="Introduction">Introduction<a href="intro" /><a class="anchor-link" href="#Introduction">&#182;</a></h1><p>More often than not one would like to have mutliple plots on a single page (or vcs canvas in our case).</p>
-<p>This can be achieved via VCS's templates objects. Tweaking the templates can be tidious, this is where the EzTemplate comes handy, it helps creating vcs template object for most common plot copnfigurations.</p>
+<h1 id="Introduction">Introduction<a href="intro" /><a class="anchor-link" href="#Introduction">&#182;</a></h1><p>More often than not, one would like to have mutliple plots on a single page (or vcs canvas, in our case).</p>
+<p>This can be achieved via VCS's templates objects. Tweaking the templates can be tidious, so this is where the EzTemplate comes in handy. It helps create a vcs template object for most common plot configurations.</p>
 <h1 id="Setting-up-the-notebook">Setting up the notebook<a href="setup" /><a class="anchor-link" href="#Setting-up-the-notebook">&#182;</a></h1>
 </div>
 </div>
@@ -11845,7 +11846,7 @@ div#notebook {
 <span class="k">def</span> <span class="nf">plot_all</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
     <span class="n">canvas</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">rows</span> <span class="o">*</span> <span class="n">M</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
-        <span class="n">template</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="n">M</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">row</span> <span class="o">=</span> <span class="n">i</span> <span class="o">//</span> <span class="n">M</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>  <span class="c1"># This is vcs template object you could further edit</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="n">M</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">row</span> <span class="o">=</span> <span class="n">i</span> <span class="o">//</span> <span class="n">M</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>  <span class="c1"># This is a vcs template object you could further edit</span>
         <span class="n">display</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
 </pre></div>
@@ -11880,7 +11881,7 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Creating-Templates-for-2x3-plots-">Creating Templates for 2x3 plots <a ref="basic" /><a class="anchor-link" href="#Creating-Templates-for-2x3-plots-">&#182;</a></h1><p>Let's say we want have 6 plots, split on 3 rows of 2. Notice the canvas automatically switch to portrait orientation.</p>
+<h1 id="Creating-Templates-for-2x3-plots-">Creating Templates for 2x3 plots <a ref="basic" /><a class="anchor-link" href="#Creating-Templates-for-2x3-plots-">&#182;</a></h1><p>Let's say we want to have 6 plots, split on 3 rows of 2. Notice the canvas automatically switches to portrait orientation.</p>
 
 </div>
 </div>
@@ -11892,9 +11893,9 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">Multiple</span> <span class="o">=</span> <span class="n">EzTemplate</span><span class="o">.</span><span class="n">Multi</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">canvas</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-    <span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>  <span class="c1"># This is vcs template object you could further edit</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>  <span class="c1"># This is a vcs template object you could further edit</span>
     <span class="n">display</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
-<span class="n">display</span>  <span class="c1"># for notebook to render final picture</span>
+<span class="n">display</span>  <span class="c1"># Causes the notebook to render the final picture</span>
 </pre></div>
 
 </div>
@@ -11940,7 +11941,7 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Accessing-a-specific-template">Accessing a specific template<a href="specific_template" /><a class="anchor-link" href="#Accessing-a-specific-template">&#182;</a></h1><p>Rather than accessing templates in order, you can retrieve directly a specific object</p>
+<h1 id="Accessing-a-specific-template">Accessing a specific template<a href="specific_template" /><a class="anchor-link" href="#Accessing-a-specific-template">&#182;</a></h1><p>Rather than accessing templates in order, you can retrieve a specific object directly.</p>
 
 </div>
 </div>
@@ -11951,11 +11952,11 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">canvas</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># This is vcs template object you could further edit</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Retrieve the object in the first position located at row 0, column 0.</span>
 <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
-<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># This is vcs template object you could further edit</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Retrieve the object located at row 1, column 1.</span>
 <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
-<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># This is vcs template object you could further edit</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Retrieve the object located at row 2, column 0.</span>
 <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
 </pre></div>
 
@@ -11990,7 +11991,7 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Local-legend">Local legend<a href="local_legend" /><a class="anchor-link" href="#Local-legend">&#182;</a></h1><p>You probably noticed that only one legend is plotted, sometimes you might want a separate legend for a specific subplot. This can be achieved when you get the template</p>
+<h1 id="Local-legend">Local legend<a href="local_legend" /><a class="anchor-link" href="#Local-legend">&#182;</a></h1><p>You probably noticed that only one legend is plotted. Sometimes you might want a separate legend for a specific subplot. This can be achieved when you get the template.</p>
 
 </div>
 </div>
@@ -12002,11 +12003,11 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">canvas</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">canvas</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># This is vcs template object you could further edit</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Retrieve the object in the first position located at row 0, column 0.</span>
 <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
-<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="s2">&quot;local&quot;</span><span class="p">)</span>  <span class="c1"># This is vcs template object you could further edit</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="s2">&quot;local&quot;</span><span class="p">)</span>  <span class="c1"># Create a legend for the subplot located at row 1, column 1.</span>
 <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
-<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># This is vcs template object you could further edit</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Retrieve the object located at row 2, column 0.</span>
 <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
 </pre></div>
 
@@ -12041,7 +12042,7 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Controling-the-subplots-aspects">Controling the subplots aspects<a href="defaults" /><a class="anchor-link" href="#Controling-the-subplots-aspects">&#182;</a></h1><p>Many general aspect of the plot cna be controlled via the <code>Multi</code> object. Al ist of controllable aspect and their current values can be accessed vi the <code>list()</code> function</p>
+<h1 id="Controlling-the-subplots-aspects">Controlling the subplots aspects<a href="defaults" /><a class="anchor-link" href="#Controlling-the-subplots-aspects">&#182;</a></h1><p>Many general aspects of the plot can be controlled via the <code>Multi</code> object. A list of controllable aspects and their current values can be accessed via the <code>list()</code> function.</p>
 
 </div>
 </div>
@@ -12097,7 +12098,7 @@ member = legend
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Base-template">Base template<a href="base_template" /><a class="anchor-link" href="#Base-template">&#182;</a></h2><p>By default each individual template is generated based on the <code>default</code> vcs template. But you can pass it the base template you would like to be used.</p>
+<h2 id="Base-template">Base template<a href="base_template" /><a class="anchor-link" href="#Base-template">&#182;</a></h2><p>By default each individual template is generated from the <code>default</code> vcs template, but you can pass it the base template you would like to use instead.</p>
 
 </div>
 </div>
@@ -12152,9 +12153,9 @@ member = legend
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">Multiple</span> <span class="o">=</span> <span class="n">EzTemplate</span><span class="o">.</span><span class="n">Multi</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="n">base_template</span><span class="p">)</span>
 <span class="n">canvas</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-    <span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>  <span class="c1"># This is vcs template object you could further edit</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>  <span class="c1"># This is a vcs template object you could further edit</span>
     <span class="n">display</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
-<span class="n">display</span>  <span class="c1"># for notebook to render final picture</span>
+<span class="n">display</span>  <span class="c1"># Causes the notebook to render the final picture</span>
 </pre></div>
 
 </div>
@@ -12188,9 +12189,9 @@ member = legend
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Overall-plot-margins">Overall plot margins<a href="margins" /><a class="anchor-link" href="#Overall-plot-margins">&#182;</a></h2><p>EzTemplate lets you control around the plot, for this use the <code>margins</code> section to the Multi object.</p>
-<p>bellow we use drastic value to for educational purpose.</p>
-<p>Notice the legend thickness increased due to more space available from the bottom margin</p>
+<h2 id="Overall-plot-margins">Overall plot margins<a href="margins" /><a class="anchor-link" href="#Overall-plot-margins">&#182;</a></h2><p>EzTemplate lets you control the space around the plot using the <code>margins</code> property of the Multi object.</p>
+<p>For educational purposes, we use drastic values in the example below.</p>
+<p>Notice that the legend thickness increased due to more space available in the bottom margin.</p>
 
 </div>
 </div>
@@ -12238,8 +12239,8 @@ member = legend
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Spacing-between-plots">Spacing between plots<a href="spacing" /><a class="anchor-link" href="#Spacing-between-plots">&#182;</a></h2><p>One can also control how much spacing should be set between plots, for this use the <code>spacing</code> section.</p>
-<p>Here again we use drastic values for educational purposes.</p>
+<h2 id="Spacing-between-plots">Spacing between plots<a href="spacing" /><a class="anchor-link" href="#Spacing-between-plots">&#182;</a></h2><p>One can also control how much spacing should be set between plots by using the <code>spacing</code> property.</p>
+<p>Here again, we use drastic values for educational purposes.</p>
 
 </div>
 </div>
@@ -12285,8 +12286,8 @@ member = legend
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Controlling-the-legend">Controlling the legend<a href="legend" /><a class="anchor-link" href="#Controlling-the-legend">&#182;</a></h2><p>As we mentioned earlier, EzTemplate try to make the best possible use of the free space to plot the overall legend (set on template at row=0, column=0)</p>
-<h3 id="Legend-direction">Legend direction<a href="direction" /><a class="anchor-link" href="#Legend-direction">&#182;</a></h3><p>By default we use the bottom margin to draw an horizontal legend, but we can opt for a vertical legend in which case the right margin space will be used</p>
+<h2 id="Controlling-the-legend">Controlling the legend<a href="legend" /><a class="anchor-link" href="#Controlling-the-legend">&#182;</a></h2><p>As we mentioned earlier, EzTemplate tries to make the best possible use of the free space to plot the overall legend (set on template at row=0, column=0).</p>
+<h3 id="Legend-direction">Legend direction<a href="direction" /><a class="anchor-link" href="#Legend-direction">&#182;</a></h3><p>By default we use the bottom margin to draw an horizontal legend, but we can opt for a vertical legend in which case the right margin space will be used.</p>
 
 </div>
 </div>
@@ -12331,7 +12332,7 @@ member = legend
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Thickness">Thickness<a class="anchor-link" href="#Thickness">&#182;</a></h3><p>The legend bar thickness can also be controlled</p>
+<h3 id="Thickness">Thickness<a class="anchor-link" href="#Thickness">&#182;</a></h3><p>The legend bar thickness can also be controlled.</p>
 
 </div>
 </div>
@@ -12376,7 +12377,7 @@ member = legend
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Strecthing-the-legend-">Strecthing the legend <a href="stretch" /><a class="anchor-link" href="#Strecthing-the-legend-">&#182;</a></h2><p>The amount of space to stretch the legend to is controleld via the <code>stretch</code> attribute</p>
+<h2 id="Strecthing-the-legend-">Stretching the legend <a href="stretch" /><a class="anchor-link" href="#Strecthing-the-legend-">&#182;</a></h2><p>The length of the legend (or the space it is stretched over) is controlled via the <code>stretch</code> attribute.</p>
 
 </div>
 </div>
@@ -12421,7 +12422,7 @@ member = legend
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Fonts">Fonts<a href="fonts" /><a class="anchor-link" href="#Fonts">&#182;</a></h3><p>Sometimes if you have too many plots the font scaling can get too drastic and you end up not seeing anything, so by default the fonts will not be scaled less than 80%, but you can limit the font scaling at the <code>get</code> time via the <code>fontlimit</code> argument</p>
+<h3 id="Fonts">Fonts<a href="fonts" /><a class="anchor-link" href="#Fonts">&#182;</a></h3><p>Sometimes, if you have too many plots the font scaling can get too drastic and you end up not seeing anything, so by default the fonts will not be scaled less than 80%, but you can limit the font scaling at the <code>get</code> time via the <code>fontlimit</code> argument.</p>
 
 </div>
 </div>
@@ -12434,7 +12435,7 @@ member = legend
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">canvas</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 <span class="n">Multiple</span> <span class="o">=</span> <span class="n">EzTemplate</span><span class="o">.</span><span class="n">Multi</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">Multiple</span><span class="o">.</span><span class="n">rows</span> <span class="o">*</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
-    <span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">row</span> <span class="o">=</span> <span class="n">i</span> <span class="o">//</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">fontlimit</span><span class="o">=.</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># This is vcs template object you could further edit</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="n">i</span> <span class="o">%</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">row</span> <span class="o">=</span> <span class="n">i</span> <span class="o">//</span> <span class="n">Multiple</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span> <span class="n">fontlimit</span><span class="o">=.</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># This is a vcs template object you could further edit</span>
     <span class="n">display</span> <span class="o">=</span> <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="p">],</span> <span class="n">template</span><span class="p">,</span> <span class="n">gm</span><span class="p">)</span>
 <span class="n">canvas</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
 </pre></div>
