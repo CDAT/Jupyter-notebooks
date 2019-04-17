@@ -11775,11 +11775,10 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Animations-In-VCS">Animations In VCS<a id="top" /><a class="anchor-link" href="#Animations-In-VCS">&#182;</a></h1><p>This Notebook demonstrates how to create animations in VCS</p>
+<h1 id="Animations-In-VCS-">Animations In VCS<a class="tocSkip" id="top"> </a><a class="anchor-link" href="#Animations-In-VCS-">&#182;</a></h1><p>This Notebook demonstrates how to create animations in VCS</p>
 <p>Animations are rendered via FFMPEG</p>
-<ul>
-<li><a href="Animations.ipynb">Download the Jupyter notebook</a></li>
-</ul>
+<p>© The CDAT software was developed by LLNL. This tutorial was written by Charles Doutriaux. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.</p>
+<p><a href="Animations.ipynb">Download the Jupyter notebook</a></p>
 
 </div>
 </div>
@@ -11788,35 +11787,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Content">Content<a class="anchor-link" href="#Content">&#182;</a></h1><ul>
-<li><a href="#prepare">Preparing The Notebook</a></li>
-<li><a href="#example1">Example 1: Simple 2D Animation</a><ul>
-<li><a href="#2d_data">preparing 1d data</a></li>
-<li><a href="#2d_creating">creating the frames/pngs</a></li>
-<li><a href="#2d_anim">create the animation</a></li>
-</ul>
-</li>
-<li><a href="#example2">Example 2: 1D line moving behind a "target" 1D data</a><ul>
-<li><a href="#1d_data">preparing 1d data</a></li>
-<li><a href="#1d_vcs_objects">preparing vcs objects</a></li>
-<li><a href="#1d_creating">creating the frames/pngs</a></li>
-<li><a href="#1d_anim">create the animation</a></li>
-<li><a href="#1d_slow">slowing down the animation</a></li>
-<li><a href="#1d_fast">speeding up the animation</a></li>
-</ul>
-</li>
-<li><a href="#example3">Example 3: Rotating Earth</a><ul>
-<li><a href="#rot_data">preparing data</a></li>
-<li><a href="#rot_vcs_objects">preparing vcs objects</a></li>
-<li><a href="#rot_creating">creating the frames/pngs</a></li>
-<li><a href="#rot_anim">create the animation</a></li>
-<li><a href="#rot_order">controlling the animation order</a></li>
-<li><a href="#rot_all">bringing it all together, animating the data as well</a></li>
-</ul>
-</li>
-</ul>
-<p><a href="#top">Back to top</a></p>
-
+<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Preparing-The-Notebook" data-toc-modified-id="Preparing-The-Notebook-1">Preparing The Notebook</a></span></li><li><span><a href="#Example-1:-Simple-2D-data-animation" data-toc-modified-id="Example-1:-Simple-2D-data-animation-2">Example 1: Simple 2D data animation</a></span><ul class="toc-item"><li><span><a href="#Prepare-data" data-toc-modified-id="Prepare-data-2.1">Prepare data</a></span></li><li><span><a href="#Create-Frames" data-toc-modified-id="Create-Frames-2.2">Create Frames</a></span></li><li><span><a href="#Create-Animation" data-toc-modified-id="Create-Animation-2.3">Create Animation</a></span></li></ul></li><li><span><a href="#Example-2:-1D-data-moving-behind-a-1D-target-data" data-toc-modified-id="Example-2:-1D-data-moving-behind-a-1D-target-data-3">Example 2: 1D data moving behind a 1D target data</a></span><ul class="toc-item"><li><span><a href="#Let's-prepare-some-data" data-toc-modified-id="Let's-prepare-some-data-3.1">Let's prepare some data</a></span></li><li><span><a href="#Prepare-graphic-methods-and-templates" data-toc-modified-id="Prepare-graphic-methods-and-templates-3.2">Prepare graphic methods and templates</a></span></li><li><span><a href="#Create-each-frame/png" data-toc-modified-id="Create-each-frame/png-3.3">Create each frame/png</a></span></li><li><span><a href="#Create-animation" data-toc-modified-id="Create-animation-3.4">Create animation</a></span></li><li><span><a href="#Slowing-Down" data-toc-modified-id="Slowing-Down-3.5">Slowing Down</a></span></li><li><span><a href="#Speeding-up-the-animation" data-toc-modified-id="Speeding-up-the-animation-3.6">Speeding up the animation</a></span></li></ul></li><li><span><a href="#Example-3:-Rotating-Globe" data-toc-modified-id="Example-3:-Rotating-Globe-4">Example 3: Rotating Globe</a></span><ul class="toc-item"><li><span><a href="#Preparing-the-data" data-toc-modified-id="Preparing-the-data-4.1">Preparing the data</a></span></li><li><span><a href="#Preparing-the-vcs-objects" data-toc-modified-id="Preparing-the-vcs-objects-4.2">Preparing the vcs objects</a></span></li><li><span><a href="#Preparing-the-images" data-toc-modified-id="Preparing-the-images-4.3">Preparing the images</a></span></li><li><span><a href="#Creating-the-animation" data-toc-modified-id="Creating-the-animation-4.4">Creating the animation</a></span></li><li><span><a href="#Controlling" data-toc-modified-id="Controlling-4.5">Controlling</a></span></li><li><span><a href="#Animating-Globe-and-Data" data-toc-modified-id="Animating-Globe-and-Data-4.6">Animating Globe and Data</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -11824,7 +11796,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Preparing-The-Notebook">Preparing The Notebook<a id="prepare" /><a class="anchor-link" href="#Preparing-The-Notebook">&#182;</a></h1><p><a href="#top">Back to top</a></p>
+<h1 id="Preparing-The-Notebook">Preparing The Notebook<a class="anchor-link" href="#Preparing-The-Notebook">&#182;</a></h1><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -11860,7 +11832,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example-1:-Simple-2D-data-animation">Example 1: Simple 2D data animation<a id="example1" /><a class="anchor-link" href="#Example-1:-Simple-2D-data-animation">&#182;</a></h1><p>In this example we will show a simple 2D animation</p>
+<h1 id="Example-1:-Simple-2D-data-animation">Example 1: Simple 2D data animation<a class="anchor-link" href="#Example-1:-Simple-2D-data-animation">&#182;</a></h1><p>In this example we will show a simple 2D animation</p>
 <p><a href="#top">Back to top</a></p>
 
 </div>
@@ -11870,7 +11842,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Prepare-data">Prepare data<a id="2d_data" /><a class="anchor-link" href="#Prepare-data">&#182;</a></h2>
+<h2 id="Prepare-data">Prepare data<a class="anchor-link" href="#Prepare-data">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
+
 </div>
 </div>
 </div>
@@ -11893,7 +11866,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-Frames">Create Frames<a id="2d_creating" /><a class="anchor-link" href="#Create-Frames">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Create-Frames">Create Frames<a class="anchor-link" href="#Create-Frames">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -11921,31 +11894,12 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/doutriaux1/anaconda2/envs/cdat/lib/python2.7/site-packages/vtk/util/numpy_support.py:135: FutureWarning: Conversion of the second argument of issubdtype from `complex` to `np.complexfloating` is deprecated. In future, it will be treated as `np.complex128 == np.dtype(complex).type`.
-  assert not numpy.issubdtype(z.dtype, complex), \
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-Animation">Create Animation<a id="2d_anim" /><a class="anchor-link" href="#Create-Animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Create-Animation">Create Animation<a class="anchor-link" href="#Create-Animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -11990,7 +11944,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example-2:-1D-data-moving-behind-a-1D-target-data">Example 2: 1D data moving behind a 1D target data<a id="example2" /><a class="anchor-link" href="#Example-2:-1D-data-moving-behind-a-1D-target-data">&#182;</a></h1><p>In this example we will show a fix 1D <em>target</em> dataset and a moving red dataset in the back</p>
+<h1 id="Example-2:-1D-data-moving-behind-a-1D-target-data">Example 2: 1D data moving behind a 1D target data<a class="anchor-link" href="#Example-2:-1D-data-moving-behind-a-1D-target-data">&#182;</a></h1><p>In this example we will show a fix 1D <em>target</em> dataset and a moving red dataset in the back</p>
 <p><a href="#top">Back to top</a></p>
 
 </div>
@@ -12000,7 +11954,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Let's-prepare-some-data">Let's prepare some data<a id="1d_data" /><a class="anchor-link" href="#Let's-prepare-some-data">&#182;</a></h2>
+<h2 id="Let's-prepare-some-data">Let's prepare some data<a class="anchor-link" href="#Let's-prepare-some-data">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
+
 </div>
 </div>
 </div>
@@ -12045,7 +12000,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Prepare-graphic-methods-and-templates">Prepare graphic methods and templates<a id="1d_vcs_objects" /><a class="anchor-link" href="#Prepare-graphic-methods-and-templates">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Prepare-graphic-methods-and-templates">Prepare graphic methods and templates<a class="anchor-link" href="#Prepare-graphic-methods-and-templates">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -12086,14 +12041,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-each-frame/png">Create each frame/png<a id="1d_create" /><a class="anchor-link" href="#Create-each-frame/png">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Create-each-frame/png">Create each frame/png<a class="anchor-link" href="#Create-each-frame/png">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">vcs</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12119,14 +12074,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-animation">Create animation<a id="1d_anim" /><a class="anchor-link" href="#Create-animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Create-animation">Create animation<a class="anchor-link" href="#Create-animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;1d_animation.mp4&quot;</span>
@@ -12139,38 +12094,19 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[8]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<video width='640' height='420'controls><source src='1d_animation.mp4' type='video/mp4'>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Slowing-Down">Slowing Down<a id="1d_slow" /><a class="anchor-link" href="#Slowing-Down">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Slowing-Down">Slowing Down<a class="anchor-link" href="#Slowing-Down">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
@@ -12184,38 +12120,19 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[9]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<video width='640' height='420'controls><source src='1d_animation_slow.mp4' type='video/mp4'>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Speeding-up-the-animation">Speeding up the animation<a id="1d_fast" /><a class="anchor-link" href="#Speeding-up-the-animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Speeding-up-the-animation">Speeding up the animation<a class="anchor-link" href="#Speeding-up-the-animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
@@ -12229,31 +12146,12 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[10]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<video width='640' height='420'controls><source src='1d_animation_fast.mp4' type='video/mp4'>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example-3:-Rotating-Globe">Example 3: Rotating Globe<a id="example3" /><a class="anchor-link" href="#Example-3:-Rotating-Globe">&#182;</a></h1><p>In this example we will display a rotating earth
+<h1 id="Example-3:-Rotating-Globe">Example 3: Rotating Globe<a class="anchor-link" href="#Example-3:-Rotating-Globe">&#182;</a></h1><p>In this example we will display a rotating earth
 <a href="#top">Back to top</a></p>
 
 </div>
@@ -12263,14 +12161,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparing-the-data">Preparing the data<a id="rot_prepare" /><a class="anchor-link" href="#Preparing-the-data">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Preparing-the-data">Preparing the data<a class="anchor-link" href="#Preparing-the-data">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">cdms2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;clt.nc&quot;</span><span class="p">)</span>
@@ -12286,14 +12184,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparing-the-vcs-objects">Preparing the vcs objects<a id="rot_vcs_objects" /><a class="anchor-link" href="#Preparing-the-vcs-objects">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Preparing-the-vcs-objects">Preparing the vcs objects<a class="anchor-link" href="#Preparing-the-vcs-objects">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># create new canvas</span>
@@ -12322,14 +12220,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparing-the-images">Preparing the images<a id="rot_creating" /><a class="anchor-link" href="#Preparing-the-images">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Preparing-the-images">Preparing the images<a class="anchor-link" href="#Preparing-the-images">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">centerLongitude</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">366</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
@@ -12348,14 +12246,14 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Creating-the-animation">Creating the animation<a id="rot_anim" /><a class="anchor-link" href="#Creating-the-animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
+<h2 id="Creating-the-animation">Creating the animation<a class="anchor-link" href="#Creating-the-animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;rot_animation.mp4&quot;</span>
@@ -12369,42 +12267,13 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>files used [&#39;pngs/rotate_000000.png&#39;, &#39;pngs/rotate_000005.png&#39;, &#39;pngs/rotate_000010.png&#39;, &#39;pngs/rotate_000015.png&#39;, &#39;pngs/rotate_000020.png&#39;, &#39;pngs/rotate_000025.png&#39;, &#39;pngs/rotate_000030.png&#39;, &#39;pngs/rotate_000035.png&#39;, &#39;pngs/rotate_000040.png&#39;, &#39;pngs/rotate_000045.png&#39;, &#39;pngs/rotate_000050.png&#39;, &#39;pngs/rotate_000055.png&#39;, &#39;pngs/rotate_000060.png&#39;, &#39;pngs/rotate_000065.png&#39;, &#39;pngs/rotate_000070.png&#39;, &#39;pngs/rotate_000075.png&#39;, &#39;pngs/rotate_000080.png&#39;, &#39;pngs/rotate_000085.png&#39;, &#39;pngs/rotate_000090.png&#39;, &#39;pngs/rotate_000095.png&#39;, &#39;pngs/rotate_000100.png&#39;, &#39;pngs/rotate_000105.png&#39;, &#39;pngs/rotate_000110.png&#39;, &#39;pngs/rotate_000115.png&#39;, &#39;pngs/rotate_000120.png&#39;, &#39;pngs/rotate_000125.png&#39;, &#39;pngs/rotate_000130.png&#39;, &#39;pngs/rotate_000135.png&#39;, &#39;pngs/rotate_000140.png&#39;, &#39;pngs/rotate_000145.png&#39;, &#39;pngs/rotate_000150.png&#39;, &#39;pngs/rotate_000155.png&#39;, &#39;pngs/rotate_000160.png&#39;, &#39;pngs/rotate_000165.png&#39;, &#39;pngs/rotate_000170.png&#39;, &#39;pngs/rotate_000175.png&#39;, &#39;pngs/rotate_000180.png&#39;, &#39;pngs/rotate_000185.png&#39;, &#39;pngs/rotate_000190.png&#39;, &#39;pngs/rotate_000195.png&#39;, &#39;pngs/rotate_000200.png&#39;, &#39;pngs/rotate_000205.png&#39;, &#39;pngs/rotate_000210.png&#39;, &#39;pngs/rotate_000215.png&#39;, &#39;pngs/rotate_000220.png&#39;, &#39;pngs/rotate_000225.png&#39;, &#39;pngs/rotate_000230.png&#39;, &#39;pngs/rotate_000235.png&#39;, &#39;pngs/rotate_000240.png&#39;, &#39;pngs/rotate_000245.png&#39;, &#39;pngs/rotate_000250.png&#39;, &#39;pngs/rotate_000255.png&#39;, &#39;pngs/rotate_000260.png&#39;, &#39;pngs/rotate_000265.png&#39;, &#39;pngs/rotate_000270.png&#39;, &#39;pngs/rotate_000275.png&#39;, &#39;pngs/rotate_000280.png&#39;, &#39;pngs/rotate_000285.png&#39;, &#39;pngs/rotate_000290.png&#39;, &#39;pngs/rotate_000295.png&#39;, &#39;pngs/rotate_000300.png&#39;, &#39;pngs/rotate_000305.png&#39;, &#39;pngs/rotate_000310.png&#39;, &#39;pngs/rotate_000315.png&#39;, &#39;pngs/rotate_000320.png&#39;, &#39;pngs/rotate_000325.png&#39;, &#39;pngs/rotate_000330.png&#39;, &#39;pngs/rotate_000335.png&#39;, &#39;pngs/rotate_000340.png&#39;, &#39;pngs/rotate_000345.png&#39;, &#39;pngs/rotate_000350.png&#39;, &#39;pngs/rotate_000355.png&#39;, &#39;pngs/rotate_000360.png&#39;, &#39;pngs/rotate_000365.png&#39;]
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[14]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<video width='640' height='420'controls><source src='rot_animation.mp4' type='video/mp4'>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Controlling-">Controlling <a id="rot_order" /><a class="anchor-link" href="#Controlling-">&#182;</a></h2><p>But it is rotating <strong>THE WRONG WAY!!!*</strong></p>
+<h2 id="Controlling">Controlling<a class="anchor-link" href="#Controlling">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
+<p>But it is rotating <strong>THE WRONG WAY!!!*</strong></p>
 <p>Why?</p>
 <p>FFMPEG uses the images passed by the list in the order passed.</p>
 <p>Look above the order is with <strong>growing</strong> centerLongitude</p>
@@ -12433,7 +12302,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Animating-Globe-and-Data">Animating Globe and Data<a id="rot_all" /><a class="anchor-link" href="#Animating-Globe-and-Data">&#182;</a></h2>
+<h2 id="Animating-Globe-and-Data">Animating Globe and Data<a class="anchor-link" href="#Animating-Globe-and-Data">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
+
 </div>
 </div>
 </div>
