@@ -11794,7 +11794,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>import necessary modules</p>
+<p>Import necessary modules</p>
 
 </div>
 </div>
@@ -11928,8 +11928,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's take a look at the array generated
-Note the axis are strings of varialbes used and models
+<p>Let's take a look at the array generated.
+Note the axis are strings of varialbes used and models,
 The order of the axes is the order on the plot</p>
 
 </div>
@@ -11937,7 +11937,7 @@ The order of the axes is the order on the plot</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">rms_xyt</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -11947,10 +11947,33 @@ The order of the axes is the order on the plot</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-2-2fb04f39ad4f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>rms_xyt<span class="ansi-blue-fg">.</span>info<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;rms_xyt&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Ok now let&#39;s create a VCS pcoord graphic method</span>
@@ -11975,9 +11998,9 @@ The order of the axes is the order on the plot</p>
 <p>'id' is used for variable in plot the JSON class returns var as "pmp", here "RMS" is more appropriate</p>
 <p>'title' is used to draw the plot title (location/font controlled by template)</p>
 <h2 id="Template">Template<a class="anchor-link" href="#Template">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
-<p>The template section prepares where data will be rendered on plot, and the fonts used</p>
-<p>fonts are controlled via textorientation and texttable VCS primary objects</p>
-<p>Here we need to angle a bit the xlabels (45 degrees)</p>
+<p>The template section prepares where data will be rendered on plot, and the fonts used.</p>
+<p>Fonts are controlled via textorientation and texttable VCS primary objects.</p>
+<p>Here we need to angle a bit the xlabels (45 degrees).</p>
 <p>We also want to turn off the boxes around the legend and the data area.</p>
 
 </div>
@@ -11985,7 +12008,7 @@ The order of the axes is the order on the plot</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Prepare the graphics</span>
@@ -12041,7 +12064,7 @@ The order of the axes is the order on the plot</p>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-2-69e0442135ea&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">&lt;ipython-input-4-69e0442135ea&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># Prepare the graphics</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># Set variable name</span>
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>rms_xyt<span class="ansi-blue-fg">.</span>id <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;RMS&#34;</span>
@@ -12058,7 +12081,7 @@ The order of the axes is the order on the plot</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Plot with default values of graphic method</span>
@@ -12087,14 +12110,14 @@ The order of the axes is the order on the plot</p>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-3-f165ce061974&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># Bug vcsaddons need to return a display</span>
+<span class="ansi-green-fg">&lt;ipython-input-5-f165ce061974&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-red-fg"># as a result it does not show up in notebook</span>
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>x<span class="ansi-blue-fg">.</span>clear<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> show <span class="ansi-blue-fg">=</span> VCSAddonsNotebook<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> x<span class="ansi-blue-fg">.</span>clear<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg"> </span>show <span class="ansi-blue-fg">=</span> VCSAddonsNotebook<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      6</span> gm<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>rms_xyt<span class="ansi-blue-fg">,</span>template<span class="ansi-blue-fg">=</span>t<span class="ansi-blue-fg">,</span>bg<span class="ansi-blue-fg">=</span>True<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;x&#39; is not defined</pre>
+<span class="ansi-red-fg">NameError</span>: name &#39;VCSAddonsNotebook&#39; is not defined</pre>
 </div>
 </div>
 
@@ -12107,15 +12130,15 @@ The order of the axes is the order on the plot</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Control-various-aspects-of-the-graphic-method">Control various aspects of the graphic method<a class="anchor-link" href="#Control-various-aspects-of-the-graphic-method">&#182;</a></h1><p><a href="#top">Back to Top</a></p>
-<p>We want the first two model to be 'blue' and 'red' and a bit thicker</p>
-<p>All other plots will be 'grey' and 'dashed'</p>
+<p>We want the first two model to be 'blue' and 'red' and a bit thicker.</p>
+<p>All other plots will be 'grey' and 'dashed'.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -12146,14 +12169,13 @@ The order of the axes is the order on the plot</p>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-4-436230ac7de8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>x<span class="ansi-blue-fg">.</span>clear<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> gm<span class="ansi-blue-fg">.</span>linecolors <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;blue&#34;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;red&#34;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;grey&#34;</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> gm<span class="ansi-blue-fg">.</span>linestyles<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;solid&#34;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;solid&#34;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;dot&#34;</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> gm<span class="ansi-blue-fg">.</span>linewidths<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">5.</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">5.</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1.</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> gm<span class="ansi-blue-fg">.</span>markercolors <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;blue&#34;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;red&#34;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;grey&#34;</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">&lt;ipython-input-6-436230ac7de8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> gm<span class="ansi-blue-fg">.</span>markertypes<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;triangle_up&#34;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;star&#34;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;dot&#34;</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span> gm<span class="ansi-blue-fg">.</span>markersizes<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg"> </span>gm<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>rms_xyt<span class="ansi-blue-fg">,</span>template<span class="ansi-blue-fg">=</span>t<span class="ansi-blue-fg">,</span>bg<span class="ansi-blue-fg">=</span>True<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> show<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;x&#39; is not defined</pre>
+<span class="ansi-red-fg">NameError</span>: name &#39;rms_xyt&#39; is not defined</pre>
 </div>
 </div>
 
@@ -12163,7 +12185,7 @@ The order of the axes is the order on the plot</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># change order and number of models and variables</span>
@@ -12205,14 +12227,14 @@ The order of the axes is the order on the plot</p>
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-5-ac6e053d62e3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># change order and number of models and variables</span>
+<span class="ansi-green-fg">&lt;ipython-input-7-ac6e053d62e3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg"># We need to creaate a new gm</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>gm <span class="ansi-blue-fg">=</span> vcsaddons<span class="ansi-blue-fg">.</span>createparallelcoordinates<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">=</span>x<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> axes <span class="ansi-blue-fg">=</span> rms_xyt<span class="ansi-blue-fg">.</span>getAxisList<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> gm <span class="ansi-blue-fg">=</span> vcsaddons<span class="ansi-blue-fg">.</span>createparallelcoordinates<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">=</span>x<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>axes <span class="ansi-blue-fg">=</span> rms_xyt<span class="ansi-blue-fg">.</span>getAxisList<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      5</span> models = [&#39;MIROC4h&#39;, &#39;HadGEM2-AO&#39;, &#39;GFDL-ESM2M&#39;,
+<span class="ansi-green-intense-fg ansi-bold">      6</span>  <span class="ansi-blue-fg">&#39;GFDL-ESM2G&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;GFDL-CM3&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;FGOALS-g2&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;CSIRO-Mk3-6-0&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;CESM1-WACCM&#39;</span><span class="ansi-blue-fg">,</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;x&#39; is not defined</pre>
+<span class="ansi-red-fg">NameError</span>: name &#39;rms_xyt&#39; is not defined</pre>
 </div>
 </div>
 

@@ -7,7 +7,7 @@
 	calendar	="gregorian"
 	id	="none"
 	history	="
-[2019-4-17 17:33:18] /export/reshel3/anaconda52/envs/cdms2/bin/cdscan -x cdsample.xml u_2000.nc u_2001.nc u_2002.nc v_2000.nc v_2001.nc v_2002.nc"
+[2019-5-13 22:24:26] /export/reshel3/anaconda52/envs/cdms2/bin/cdscan -x cdsample.xml u_2000.nc u_2001.nc u_2002.nc v_2000.nc v_2001.nc v_2002.nc"
 	>
 	<axis
 		datatype	="Double"
