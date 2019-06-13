@@ -11775,15 +11775,37 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Extending-Many-Variables-To-Cover-The-Same-Time-Domain">Extending Many Variables To Cover The Same Time Domain<a class="anchor-link" href="#Extending-Many-Variables-To-Cover-The-Same-Time-Domain">&#182;</a></h1><p>In this tutorial we create two variables over two different but overlapping time domains. 
+<h1 id="Extending-Many-Variables-To-Cover-The-Same-Time-Domain-">Extending Many Variables To Cover The Same Time Domain<a class="tocSkip" id="top"> </a><a class="anchor-link" href="#Extending-Many-Variables-To-Cover-The-Same-Time-Domain-">&#182;</a></h1><p>In this tutorial we create two variables over two different but overlapping time domains. 
 We will <em>grow</em> both variables to span the same (union) domain, filling the added times with missing data</p>
-<p>© Software was developed by Charles Dutriaux and CDAT team, and tutorial was written by Charles Doutriaux.</p>
-<h1 id="Content">Content<a class="anchor-link" href="#Content">&#182;</a></h1><ul>
-<li><a href="#create">Create The two Variables</a></li>
-<li><a href="#function">The Actual Function</a></li>
-<li><a href="#apply">Apply</a></li>
-</ul>
-<h1 id="Creating-the-Variables">Creating the Variables<a id="create" /><a class="anchor-link" href="#Creating-the-Variables">&#182;</a></h1><p>Let's create two distinct variables (monthly time series)</p>
+<p>© The CDAT software was developed by LLNL. This tutorial was written by Charles Doutriaux. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.</p>
+<p><a href="Extend_Two_Variables_To_Cover_Same_Time_Domain.ipynb">Download the Jupyter Notebook</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Creating-the-Variables" data-toc-modified-id="Creating-the-Variables-1">Creating the Variables<a id="create"></a></a></span></li><li><span><a href="#Function-Create-&quot;Grown&quot;-Data" data-toc-modified-id="Function-Create-&quot;Grown&quot;-Data-2">Function Create "Grown" Data<a id="function"></a></a></span></li><li><span><a href="#Use-the-function" data-toc-modified-id="Use-the-function-3">Use the function</a></span></li></ul></div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Creating-the-Variables">Creating the Variables<a id="create" /><a class="anchor-link" href="#Creating-the-Variables">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's create two distinct variables (monthly time series)</p>
 <p>variable 1 going from 1989 through 2010
 variable 2 going from 2000 through 2017</p>
 
@@ -11792,7 +11814,7 @@ variable 2 going from 2000 through 2017</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">cdms2</span>
@@ -11842,13 +11864,14 @@ variable 2 going from 2000 through 2017</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Function-Create-&quot;Grown&quot;-Data">Function Create "Grown" Data<a id="function" /><a class="anchor-link" href="#Function-Create-&quot;Grown&quot;-Data">&#182;</a></h1>
+<h2 id="Function-Create-&quot;Grown&quot;-Data">Function Create "Grown" Data<a id="function" /><a class="anchor-link" href="#Function-Create-&quot;Grown&quot;-Data">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">missingMonths</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
@@ -11928,13 +11951,14 @@ variable 2 going from 2000 through 2017</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Use-the-function">Use the function<a id="apply" /><a class="anchor-link" href="#Use-the-function">&#182;</a></h2>
+<h2 id="Use-the-function">Use the function<a class="anchor-link" href="#Use-the-function">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span> <span class="o">=</span> <span class="n">growDatasets</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">)</span>
@@ -11943,24 +11967,6 @@ variable 2 going from 2000 through 2017</p>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(348,) 0.136511822719 -- -- 1.05417667364
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
