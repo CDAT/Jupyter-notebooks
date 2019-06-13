@@ -1,0 +1,127 @@
+<h1 id="masking_data_land-sea_masks-tutorial">Masking_Data_Land-Sea_masks Tutorial</h1>
+<p><a href="Masking_Data_Land-Sea_masks.ipynb">download iPython Notebook</a></p>
+
+<h1 id="in-this-example-we-will-show-how-to-generate-masks-including-lanssea-masks">In this example we will show how to generate masks, including lans/sea masks</h1>
+
+<p>Notebook can be accessed <a href="notebook.ipynb">here</a></p>
+
+<h2 id="preparing-the-notebook">Preparing the notebook</h2>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"https://uvcdat.llnl.gov/cdat/sample_data/clt.nc"</span><span class="p">,</span><span class="n">stream</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"clt.nc"</span><span class="p">,</span><span class="s">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span>  <span class="c"># filter local_filename keep-alive new chunks</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+
+<span class="c"># and load data</span>
+<span class="kn">import</span> <span class="nn">cdms2</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">cdms2</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"clt.nc"</span><span class="p">)</span>
+<span class="n">clt</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="s">"clt"</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">squeeze</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c"># Get first month</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="s">"u"</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">squeeze</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="s">"v"</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">squeeze</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">clt</span> <span class="o">=</span> <span class="n">clt</span><span class="o">.</span><span class="n">regrid</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">getGrid</span><span class="p">(),</span> <span class="n">regridTool</span><span class="o">=</span><span class="s">"regrid2"</span><span class="p">)</span> <span class="c"># Put data on same grid</span>
+
+<span class="c"># computes wind speed</span>
+<span class="kn">import</span> <span class="nn">MV2</span>
+<span class="n">speed</span> <span class="o">=</span> <span class="n">MV2</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">u</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span> <span class="s">"Max speed:"</span><span class="p">,</span> <span class="n">speed</span><span class="o">.</span><span class="nb">max</span><span class="p">()</span>
+<span class="k">print</span> <span class="s">"Mean speed:"</span><span class="p">,</span><span class="n">speed</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="k">print</span> <span class="s">"Min speed:"</span><span class="p">,</span><span class="n">speed</span><span class="o">.</span><span class="nb">min</span><span class="p">()</span>
+
+<span class="c"># Prepare graphics</span>
+<span class="kn">import</span> <span class="nn">vcs</span>
+<span class="n">x</span><span class="o">=</span><span class="n">vcs</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Max speed: 68.9132
+Mean speed: 16.2591233086
+Min speed: 0.0611087
+</code></pre>
+</div>
+
+<h2 id="value-based--masks">Value based  masks</h2>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Let's mask out area where wind speed is greater than twice mean</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">MV2</span><span class="o">.</span><span class="n">greater</span><span class="p">(</span><span class="n">speed</span><span class="p">,</span><span class="n">speed</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">*</span><span class="mf">2.</span><span class="p">)</span>
+
+<span class="c"># Let's apply this mask</span>
+<span class="n">clt_masked</span> <span class="o">=</span> <span class="n">MV2</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span><span class="n">clt</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt_masked</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/Users/doutriaux1/anaconda2/envs/2.12-nox/lib/python2.7/site-packages/vcs/VTKPlots.py:998: MaskedArrayFutureWarning: setting an item on a masked array which has a shared mask will not copy the mask and also change the original mask array in the future.
+Check the NumPy 1.11 release notes for more information.
+  data[:] = numpy.ma.masked_invalid(data, numpy.nan)
+/Users/doutriaux1/anaconda2/envs/2.12-nox/lib/python2.7/site-packages/numpy/ma/core.py:6385: MaskedArrayFutureWarning: In the future the default for ma.maximum.reduce will be axis=0, not the current None, to match np.maximum.reduce. Explicitly pass 0 or None to silence this warning.
+  return self.reduce(a)
+/Users/doutriaux1/anaconda2/envs/2.12-nox/lib/python2.7/site-packages/numpy/ma/core.py:6385: MaskedArrayFutureWarning: In the future the default for ma.minimum.reduce will be axis=0, not the current None, to match np.minimum.reduce. Explicitly pass 0 or None to silence this warning.
+  return self.reduce(a)
+</code></pre>
+</div>
+
+<p><img src="Masking_Data_Land-Sea_masks_files/Masking_Data_Land-Sea_masks_3_1.png" alt="png" /></p>
+
+<h2 id="land-sea-masks">Land-sea Masks</h2>
+
+<h3 id="generating-a-landsea-mask-on-any-grid">Generating a landsea mask on any grid</h3>
+
+<p>Conveniently CDAT can generate masks for you (for regular grids only).</p>
+
+<p>The observed data set used here as the basis for creating realistic model land/sea masks was obtained from the U.S. Navy on a 1/6 degree longitude-latitude grid.</p>
+
+<p>more on the technique used can be read <a href="https://www-pcmdi.llnl.gov/publications/pdf/58.pdf">here</a></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cdutil</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">cdutil</span><span class="o">.</span><span class="n">generateLandSeaMask</span><span class="p">(</span><span class="n">clt</span><span class="p">)</span>
+<span class="n">mask2</span> <span class="o">=</span> <span class="n">MV2</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span><span class="o">.</span><span class="n">_mask</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="n">mask</span><span class="p">)</span> <span class="c"># Not needed for cdutil versions &gt;= 2.12.2017.9.25</span>
+<span class="n">mask2</span><span class="o">.</span><span class="n">setAxisList</span><span class="p">(</span><span class="n">mask</span><span class="o">.</span><span class="n">getAxisList</span><span class="p">())</span> <span class="c"># Not needed for cdutil versions &gt;= 2.12.2017.9.25</span>
+<span class="n">clt_masked</span> <span class="o">=</span> <span class="n">MV2</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">mask2</span><span class="p">,</span><span class="n">clt</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt_masked</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p><img src="Masking_Data_Land-Sea_masks_files/Masking_Data_Land-Sea_masks_5_0.png" alt="png" /></p>
+
+<h3 id="surface-type-by-region-masks">Surface type by region masks</h3>
+
+<p>CDAT also provide capabilities to mask regions. Original regions and their numbers come from <a href="http://github.com/uv-cdat/ezget">EzGet</a></p>
+
+<p>The function requires both a land/sea mask and a file reporting “regions”, default “region” mask is as follow:
+<img src="colorgeog.png" /></p>
+
+<p>Regions tables is:
+<img src="table.png" /></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">regions</span><span class="p">,</span> <span class="n">guess</span> <span class="o">=</span> <span class="n">cdutil</span><span class="o">.</span><span class="n">generateSurfaceTypeByRegionMask</span><span class="p">(</span><span class="n">mask2</span><span class="o">*</span><span class="mf">100.</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Done : |                                       | 0.00Done : ##                                      | 4.76Done : ####                                    | 9.Done : ######                                  | 14.29Done : ########                                | 19.Done : ##########                              | 23.Done : ############                            | 28.Done : ##############                          | 33.33Done : ################                        | 38.10Done : ##################                      | 42.86Done : ####################                    | 47.62Done : #####################                   | 52.Done : #######################                 | 57.Done : #########################               | 61.Done : ###########################             | 66.Done : #############################           | 71.Done : ###############################         | 76.Done : #################################       | 80.95Done : ###################################     | 85.71Done : #####################################   | 90.Done : ####################################### | 95.24Done : ########################################| 100.00%
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># let's take a look</span>
+<span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">regions</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p><img src="Masking_Data_Land-Sea_masks_files/Masking_Data_Land-Sea_masks_8_0.png" alt="png" /></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Now let's extract the indian ocean which according to table are area 205 and 206</span>
+<span class="n">ind1</span> <span class="o">=</span> <span class="n">MV2</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">regions</span><span class="p">,</span><span class="mi">205</span><span class="p">)</span>
+<span class="n">ind2</span> <span class="o">=</span> <span class="n">MV2</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">regions</span><span class="p">,</span><span class="mi">206</span><span class="p">)</span>
+<span class="n">indian_ocean</span> <span class="o">=</span> <span class="n">MV2</span><span class="o">.</span><span class="n">logical_or</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span><span class="n">ind2</span><span class="p">)</span>
+
+<span class="n">clt_indian_ocean</span> <span class="o">=</span> <span class="n">MV2</span><span class="o">.</span><span class="n">masked_where</span><span class="p">(</span><span class="n">MV2</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">indian_ocean</span><span class="p">),</span><span class="n">clt</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt_indian_ocean</span><span class="p">(</span><span class="n">longitude</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">150</span><span class="p">),</span><span class="n">latitude</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">35</span><span class="p">)),</span><span class="n">ratio</span><span class="o">=</span><span class="s">"autot"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p><img src="Masking_Data_Land-Sea_masks_files/Masking_Data_Land-Sea_masks_9_0.png" alt="png" /></p>
+
