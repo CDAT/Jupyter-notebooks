@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0046)file:///home/nadeau1/Downloads/Animations.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head><meta charset="utf-8" />
 
 <title>Animations</title>
 
-<script src="./Animations_files/require.min.js"></script>
-<script src="./Animations_files/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
 
@@ -13085,13 +13085,13 @@ div#notebook {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="file:///home/nadeau1/Downloads/custom.css">
+<link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="./Animations_files/latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config;executed=true">
+    <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -13108,113 +13108,18 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --><script type="text/javascript" async="" src="./Animations_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
-.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
-.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
-.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
-</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_About.MathJax_MousePost {outline: none}
-.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-.MathJax_MenuItem {padding: 1px 2em; background: transparent}
-.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
-.MathJax_MenuActive .MathJax_MenuArrow {color: white}
-.MathJax_MenuArrow.RTL {left: .5em; right: auto}
-.MathJax_MenuCheck {position: absolute; left: .7em}
-.MathJax_MenuCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuRadioCheck {position: absolute; left: .7em}
-.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
-.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
-.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
-.MathJax_MenuDisabled {color: GrayText}
-.MathJax_MenuActive {background-color: #606872; color: white}
-.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
-.MathJax_ContextMenu:focus {outline: none}
-.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
-#MathJax_AboutClose {top: .2em; right: .2em}
-.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
-.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
-.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
-.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
-.MathJax_MenuClose:hover span {background-color: #CCC!important}
-.MathJax_MenuClose:hover:focus {outline: none}
-</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
-</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
-.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
-</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
-#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
-#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
-</style><style type="text/css">.MathJax_Preview {color: #888}
-#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
-#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
-.MathJax_Error {color: #CC0000; font-style: italic}
-</style><style type="text/css">.MJXp-script {font-size: .8em}
-.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
-.MJXp-bold {font-weight: bold}
-.MJXp-italic {font-style: italic}
-.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
-.MJXp-largeop {font-size: 150%}
-.MJXp-largeop.MJXp-int {vertical-align: -.2em}
-.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
-.MJXp-display {display: block; text-align: center; margin: 1em 0}
-.MJXp-math span {display: inline-block}
-.MJXp-box {display: block!important; text-align: center}
-.MJXp-box:after {content: " "}
-.MJXp-rule {display: block!important; margin-top: .1em}
-.MJXp-char {display: block!important}
-.MJXp-mo {margin: 0 .15em}
-.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
-.MJXp-denom {display: inline-table!important; width: 100%}
-.MJXp-denom > * {display: table-row!important}
-.MJXp-surd {vertical-align: top}
-.MJXp-surd > * {display: block!important}
-.MJXp-script-box > *  {display: table!important; height: 50%}
-.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
-.MJXp-script-box > *:last-child > * {vertical-align: bottom}
-.MJXp-script-box > * > * > * {display: block!important}
-.MJXp-mphantom {visibility: hidden}
-.MJXp-munderover, .MJXp-munder {display: inline-table!important}
-.MJXp-over {display: inline-block!important; text-align: center}
-.MJXp-over > * {display: block!important}
-.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
-.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
-.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
-.MJXp-mtr {display: table-row!important}
-.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
-.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-mlabeledtr {display: table-row!important}
-.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
-.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
-.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
-.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
-.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
-.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
-.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
-.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
-.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
-.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
-.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
-.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
-.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
-.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
-</style></head>
-<body style=""><div id="MathJax_Message" style="display: none;"></div>
+    <!-- End of mathjax configuration --></head>
+<body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Animations-In-VCS-">Animations In VCS<a class="tocSkip" id="top"> </a><a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Animations-In-VCS-">¶</a></h1><p>This Notebook demonstrates how to create animations in VCS</p>
+<h1 id="Animations-In-VCS-">Animations In VCS<a class="tocSkip" id="top"> </a><a class="anchor-link" href="#Animations-In-VCS-">&#182;</a></h1><p>This Notebook demonstrates how to create animations in VCS</p>
 <p>Animations are rendered via FFMPEG</p>
 <p>The CDAT software was developed by LLNL. This tutorial was written by Charles Doutriaux. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.</p>
-<p><a href="file:///home/nadeau1/Downloads/Animations.ipynb">Download the Jupyter notebook</a></p>
+<p><a href="Animations.ipynb">Download the Jupyter notebook</a></p>
 
 </div>
 </div>
@@ -13222,15 +13127,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p><h1>Table of Contents<span class="tocSkip"></span></h1><p></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Preparing-The-Notebook" data-toc-modified-id="Preparing-The-Notebook-1">Preparing The Notebook</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Example-1:-Simple-2D-data-animation" data-toc-modified-id="Example-1:-Simple-2D-data-animation-2">Example 1: Simple 2D data animation</a></span><ul class="toc-item"><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Prepare-data" data-toc-modified-id="Prepare-data-2.1">Prepare data</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Create-Frames" data-toc-modified-id="Create-Frames-2.2">Create Frames</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Create-Animation" data-toc-modified-id="Create-Animation-2.3">Create Animation</a></span></li></ul></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Example-2:-1D-data-moving-behind-a-1D-target-data" data-toc-modified-id="Example-2:-1D-data-moving-behind-a-1D-target-data-3">Example 2: 1D data moving behind a 1D target data</a></span><ul class="toc-item"><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Let&#39;s-prepare-some-data" data-toc-modified-id="Let&#39;s-prepare-some-data-3.1">Let's prepare some data</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Prepare-graphic-methods-and-templates" data-toc-modified-id="Prepare-graphic-methods-and-templates-3.2">Prepare graphic methods and templates</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Create-each-frame/png" data-toc-modified-id="Create-each-frame/png-3.3">Create each frame/png</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Create-animation" data-toc-modified-id="Create-animation-3.4">Create animation</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Slowing-Down" data-toc-modified-id="Slowing-Down-3.5">Slowing Down</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Speeding-up-the-animation" data-toc-modified-id="Speeding-up-the-animation-3.6">Speeding up the animation</a></span></li></ul></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Example-3:-Rotating-Globe" data-toc-modified-id="Example-3:-Rotating-Globe-4">Example 3: Rotating Globe</a></span><ul class="toc-item"><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Preparing-the-data" data-toc-modified-id="Preparing-the-data-4.1">Preparing the data</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Preparing-the-vcs-objects" data-toc-modified-id="Preparing-the-vcs-objects-4.2">Preparing the vcs objects</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Preparing-the-images" data-toc-modified-id="Preparing-the-images-4.3">Preparing the images</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Creating-the-animation" data-toc-modified-id="Creating-the-animation-4.4">Creating the animation</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Controlling" data-toc-modified-id="Controlling-4.5">Controlling</a></span></li><li><span><a href="file:///home/nadeau1/Downloads/Animations.html#Animating-Globe-and-Data" data-toc-modified-id="Animating-Globe-and-Data-4.6">Animating Globe and Data</a></span></li></ul></li></ul></div>
+<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Preparing-The-Notebook" data-toc-modified-id="Preparing-The-Notebook-1">Preparing The Notebook</a></span></li><li><span><a href="#Example-1:-Simple-2D-data-animation" data-toc-modified-id="Example-1:-Simple-2D-data-animation-2">Example 1: Simple 2D data animation</a></span><ul class="toc-item"><li><span><a href="#Prepare-data" data-toc-modified-id="Prepare-data-2.1">Prepare data</a></span></li><li><span><a href="#Create-Frames" data-toc-modified-id="Create-Frames-2.2">Create Frames</a></span></li><li><span><a href="#Create-Animation" data-toc-modified-id="Create-Animation-2.3">Create Animation</a></span></li></ul></li><li><span><a href="#Example-2:-1D-data-moving-behind-a-1D-target-data" data-toc-modified-id="Example-2:-1D-data-moving-behind-a-1D-target-data-3">Example 2: 1D data moving behind a 1D target data</a></span><ul class="toc-item"><li><span><a href="#Let's-prepare-some-data" data-toc-modified-id="Let's-prepare-some-data-3.1">Let's prepare some data</a></span></li><li><span><a href="#Prepare-graphic-methods-and-templates" data-toc-modified-id="Prepare-graphic-methods-and-templates-3.2">Prepare graphic methods and templates</a></span></li><li><span><a href="#Create-each-frame/png" data-toc-modified-id="Create-each-frame/png-3.3">Create each frame/png</a></span></li><li><span><a href="#Create-animation" data-toc-modified-id="Create-animation-3.4">Create animation</a></span></li><li><span><a href="#Slowing-Down" data-toc-modified-id="Slowing-Down-3.5">Slowing Down</a></span></li><li><span><a href="#Speeding-up-the-animation" data-toc-modified-id="Speeding-up-the-animation-3.6">Speeding up the animation</a></span></li></ul></li><li><span><a href="#Example-3:-Rotating-Globe" data-toc-modified-id="Example-3:-Rotating-Globe-4">Example 3: Rotating Globe</a></span><ul class="toc-item"><li><span><a href="#Preparing-the-data" data-toc-modified-id="Preparing-the-data-4.1">Preparing the data</a></span></li><li><span><a href="#Preparing-the-vcs-objects" data-toc-modified-id="Preparing-the-vcs-objects-4.2">Preparing the vcs objects</a></span></li><li><span><a href="#Preparing-the-images" data-toc-modified-id="Preparing-the-images-4.3">Preparing the images</a></span></li><li><span><a href="#Creating-the-animation" data-toc-modified-id="Creating-the-animation-4.4">Creating the animation</a></span></li><li><span><a href="#Controlling" data-toc-modified-id="Controlling-4.5">Controlling</a></span></li><li><span><a href="#Animating-Globe-and-Data" data-toc-modified-id="Animating-Globe-and-Data-4.6">Animating Globe and Data</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Preparing-The-Notebook">Preparing The Notebook<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Preparing-The-Notebook">¶</a></h1><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h1 id="Preparing-The-Notebook">Preparing The Notebook<a class="anchor-link" href="#Preparing-The-Notebook">&#182;</a></h1><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13249,8 +13154,8 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"https://uvcdat.llnl.gov/cdat/sample_data/clt.nc"</span><span class="p">,</span><span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"clt.nc"</span><span class="p">,</span><span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://uvcdat.llnl.gov/cdat/sample_data/clt.nc&quot;</span><span class="p">,</span><span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;clt.nc&quot;</span><span class="p">,</span><span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">1024</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span>  <span class="c1"># filter local_filename keep-alive new chunks</span>
             <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
@@ -13264,8 +13169,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example-1:-Simple-2D-data-animation">Example 1: Simple 2D data animation<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Example-1:-Simple-2D-data-animation">¶</a></h1><p>In this example we will show a simple 2D animation</p>
-<p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h1 id="Example-1:-Simple-2D-data-animation">Example 1: Simple 2D data animation<a class="anchor-link" href="#Example-1:-Simple-2D-data-animation">&#182;</a></h1><p>In this example we will show a simple 2D animation</p>
+<p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13273,7 +13178,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Prepare-data">Prepare data<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Prepare-data">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to Top</a></p>
+<h2 id="Prepare-data">Prepare data<a class="anchor-link" href="#Prepare-data">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
 
 </div>
 </div>
@@ -13284,8 +13189,8 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cdms2</span>
-<span class="n">f</span><span class="o">=</span><span class="n">cdms2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"clt.nc"</span><span class="p">)</span>
-<span class="n">clt</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="s2">"clt"</span><span class="p">)</span>
+<span class="n">f</span><span class="o">=</span><span class="n">cdms2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;clt.nc&quot;</span><span class="p">)</span>
+<span class="n">clt</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="s2">&quot;clt&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13296,7 +13201,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-Frames">Create Frames<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Create-Frames">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Create-Frames">Create Frames<a class="anchor-link" href="#Create-Frames">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13308,8 +13213,8 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># make directory for pngs if not present</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">"pngs"</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">"pngs"</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;pngs&quot;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s2">&quot;pngs&quot;</span><span class="p">)</span>
     
 <span class="kn">import</span> <span class="nn">vcs</span>
 <span class="n">x</span><span class="o">=</span><span class="n">vcs</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -13317,7 +13222,7 @@ div#notebook {
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">clt</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
     <span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">x</span><span class="o">.</span><span class="n">png</span><span class="p">(</span><span class="s2">"pngs/2d_</span><span class="si">%s</span><span class="s2">.png"</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">png</span><span class="p">(</span><span class="s2">&quot;pngs/2d_</span><span class="si">%s</span><span class="s2">.png&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13328,7 +13233,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-Animation">Create Animation<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Create-Animation">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Create-Animation">Create Animation<a class="anchor-link" href="#Create-Animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13339,10 +13244,10 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">"2d_animation.mp4"</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;2d_animation.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"pngs/2d*png"</span><span class="p">)))</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/2d*png&quot;</span><span class="p">)))</span>
 </pre></div>
 
     </div>
@@ -13360,8 +13265,8 @@ div#notebook {
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width="640" height="420" controls=""><source src="2d_animation.mp4" type="video/mp4">
-</video></div>
+<video width='640' height='420'controls><source src='2d_animation.mp4' type='video/mp4'>
+</div>
 
 </div>
 
@@ -13372,8 +13277,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example-2:-1D-data-moving-behind-a-1D-target-data">Example 2: 1D data moving behind a 1D target data<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Example-2:-1D-data-moving-behind-a-1D-target-data">¶</a></h1><p>In this example we will show a fix 1D <em>target</em> dataset and a moving red dataset in the back</p>
-<p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h1 id="Example-2:-1D-data-moving-behind-a-1D-target-data">Example 2: 1D data moving behind a 1D target data<a class="anchor-link" href="#Example-2:-1D-data-moving-behind-a-1D-target-data">&#182;</a></h1><p>In this example we will show a fix 1D <em>target</em> dataset and a moving red dataset in the back</p>
+<p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13381,7 +13286,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Let&#39;s-prepare-some-data">Let's prepare some data<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Let&#39;s-prepare-some-data">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to Top</a></p>
+<h2 id="Let's-prepare-some-data">Let's prepare some data<a class="anchor-link" href="#Let's-prepare-some-data">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
 
 </div>
 </div>
@@ -13394,13 +13299,13 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cdutil</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
 <span class="c1"># Open data file</span>
-<span class="n">f</span><span class="o">=</span><span class="n">cdms2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"clt.nc"</span><span class="p">)</span>
+<span class="n">f</span><span class="o">=</span><span class="n">cdms2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;clt.nc&quot;</span><span class="p">)</span>
 
 <span class="c1"># reads in data</span>
-<span class="n">s</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="s2">"clt"</span><span class="p">)</span>
+<span class="n">s</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="s2">&quot;clt&quot;</span><span class="p">)</span>
 
 <span class="c1"># Computes time serie</span>
-<span class="n">ts</span><span class="o">=</span><span class="n">cdutil</span><span class="o">.</span><span class="n">averager</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s2">"xy"</span><span class="p">)</span>
+<span class="n">ts</span><span class="o">=</span><span class="n">cdutil</span><span class="o">.</span><span class="n">averager</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;xy&quot;</span><span class="p">)</span>
 
 <span class="c1"># remove the mean</span>
 <span class="n">mean</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -13411,11 +13316,11 @@ div#notebook {
 <span class="n">ts2</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span><span class="o">+</span><span class="n">Nextra</span><span class="p">)</span><span class="o">*</span><span class="mf">4.</span><span class="o">-</span><span class="mf">2.</span>
 
 <span class="c1"># When plotting we will get data for 2 extra years than our target grid</span>
-<span class="c1"># Prepare the "faxe time" axis</span>
+<span class="c1"># Prepare the &quot;faxe time&quot; axis</span>
 <span class="n">fake_time_axis</span> <span class="o">=</span> <span class="n">cdms2</span><span class="o">.</span><span class="n">createAxis</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span><span class="mi">132</span><span class="p">))</span>
 <span class="n">fake_time_axis</span><span class="o">.</span><span class="n">designateTime</span><span class="p">()</span>
-<span class="n">fake_time_axis</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="s2">"time"</span>
-<span class="n">fake_time_axis</span><span class="o">.</span><span class="n">units</span><span class="o">=</span><span class="s2">"months since 1979"</span>
+<span class="n">fake_time_axis</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="s2">&quot;time&quot;</span>
+<span class="n">fake_time_axis</span><span class="o">.</span><span class="n">units</span><span class="o">=</span><span class="s2">&quot;months since 1979&quot;</span>
 </pre></div>
 
     </div>
@@ -13426,7 +13331,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Prepare-graphic-methods-and-templates">Prepare graphic methods and templates<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Prepare-graphic-methods-and-templates">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Prepare-graphic-methods-and-templates">Prepare graphic methods and templates<a class="anchor-link" href="#Prepare-graphic-methods-and-templates">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13436,14 +13341,14 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a "blank" template</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a &quot;blank&quot; template</span>
 <span class="n">blank</span> <span class="o">=</span> <span class="n">vcs</span><span class="o">.</span><span class="n">createtemplate</span><span class="p">()</span>
 <span class="n">blank</span><span class="o">.</span><span class="n">blank</span><span class="p">()</span>
 <span class="n">blank</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">priority</span><span class="o">=</span><span class="mi">1</span> <span class="c1"># turn only data area</span>
 
-<span class="c1"># Create the "black" 1D line</span>
+<span class="c1"># Create the &quot;black&quot; 1D line</span>
 <span class="n">black</span> <span class="o">=</span> <span class="n">vcs</span><span class="o">.</span><span class="n">create1d</span><span class="p">()</span>
-<span class="n">black</span><span class="o">.</span><span class="n">linecolor</span> <span class="o">=</span><span class="s2">"black"</span>
+<span class="n">black</span><span class="o">.</span><span class="n">linecolor</span> <span class="o">=</span><span class="s2">&quot;black&quot;</span>
 <span class="n">black</span><span class="o">.</span><span class="n">markercolor</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">black</span><span class="o">.</span><span class="n">linewidth</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">black</span><span class="o">.</span><span class="n">datawc_y1</span><span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
@@ -13451,11 +13356,11 @@ div#notebook {
 <span class="n">black</span><span class="o">.</span><span class="n">datawc_x1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12</span>
 <span class="n">black</span><span class="o">.</span><span class="n">datawc_x2</span> <span class="o">=</span> <span class="mi">132</span>
 
-<span class="c1"># And from it let's create the "red" moving one</span>
+<span class="c1"># And from it let&#39;s create the &quot;red&quot; moving one</span>
 <span class="n">red</span> <span class="o">=</span> <span class="n">vcs</span><span class="o">.</span><span class="n">create1d</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">black</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="n">red</span><span class="o">.</span><span class="n">linecolor</span><span class="o">=</span><span class="s2">"red"</span>
+<span class="n">red</span><span class="o">.</span><span class="n">linecolor</span><span class="o">=</span><span class="s2">&quot;red&quot;</span>
 <span class="n">red</span><span class="o">.</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span>
-<span class="n">red</span><span class="o">.</span><span class="n">linetype</span> <span class="o">=</span> <span class="s2">"dot"</span>
+<span class="n">red</span><span class="o">.</span><span class="n">linetype</span> <span class="o">=</span> <span class="s2">&quot;dot&quot;</span>
 </pre></div>
 
     </div>
@@ -13466,7 +13371,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-each-frame/png">Create each frame/png<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Create-each-frame/png">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Create-each-frame/png">Create each frame/png<a class="anchor-link" href="#Create-each-frame/png">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13487,7 +13392,7 @@ div#notebook {
     <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span><span class="n">black</span><span class="p">)</span>
     <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tsub</span><span class="p">,</span><span class="n">red</span><span class="p">,</span><span class="n">blank</span><span class="p">)</span>
     <span class="c1"># save data to a png file</span>
-    <span class="n">x</span><span class="o">.</span><span class="n">png</span><span class="p">(</span><span class="s2">"pngs/1d_</span><span class="si">%s</span><span class="s2">.png"</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">png</span><span class="p">(</span><span class="s2">&quot;pngs/1d_</span><span class="si">%s</span><span class="s2">.png&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13498,7 +13403,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Create-animation">Create animation<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Create-animation">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Create-animation">Create animation<a class="anchor-link" href="#Create-animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13508,10 +13413,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">"1d_animation.mp4"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;1d_animation.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"pngs/1d*png"</span><span class="p">)))</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/1d*png&quot;</span><span class="p">)))</span>
 </pre></div>
 
     </div>
@@ -13529,8 +13434,8 @@ div#notebook {
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width="640" height="420" controls=""><source src="1d_animation.mp4" type="video/mp4">
-</video></div>
+<video width='640' height='420'controls><source src='1d_animation.mp4' type='video/mp4'>
+</div>
 
 </div>
 
@@ -13541,7 +13446,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Slowing-Down">Slowing Down<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Slowing-Down">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Slowing-Down">Slowing Down<a class="anchor-link" href="#Slowing-Down">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13552,10 +13457,10 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">"1d_animation_slow.mp4"</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;1d_animation_slow.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"pngs/1d*png"</span><span class="p">)),</span><span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/1d*png&quot;</span><span class="p">)),</span><span class="n">rate</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13573,8 +13478,8 @@ div#notebook {
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width="640" height="420" controls=""><source src="1d_animation_slow.mp4" type="video/mp4">
-</video></div>
+<video width='640' height='420'controls><source src='1d_animation_slow.mp4' type='video/mp4'>
+</div>
 
 </div>
 
@@ -13585,7 +13490,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Speeding-up-the-animation">Speeding up the animation<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Speeding-up-the-animation">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Speeding-up-the-animation">Speeding up the animation<a class="anchor-link" href="#Speeding-up-the-animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13596,10 +13501,10 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">glob</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">"1d_animation_fast.mp4"</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;1d_animation_fast.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"pngs/1d*png"</span><span class="p">)),</span><span class="n">rate</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/1d*png&quot;</span><span class="p">)),</span><span class="n">rate</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13617,8 +13522,8 @@ div#notebook {
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width="640" height="420" controls=""><source src="1d_animation_fast.mp4" type="video/mp4">
-</video></div>
+<video width='640' height='420'controls><source src='1d_animation_fast.mp4' type='video/mp4'>
+</div>
 
 </div>
 
@@ -13629,8 +13534,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example-3:-Rotating-Globe">Example 3: Rotating Globe<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Example-3:-Rotating-Globe">¶</a></h1><p>In this example we will display a rotating earth
-<a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h1 id="Example-3:-Rotating-Globe">Example 3: Rotating Globe<a class="anchor-link" href="#Example-3:-Rotating-Globe">&#182;</a></h1><p>In this example we will display a rotating earth
+<a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13638,7 +13543,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparing-the-data">Preparing the data<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Preparing-the-data">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Preparing-the-data">Preparing the data<a class="anchor-link" href="#Preparing-the-data">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13648,8 +13553,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">cdms2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"clt.nc"</span><span class="p">)</span>
-<span class="n">clt</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="s2">"clt"</span><span class="p">,</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">longitude</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">361</span><span class="p">),</span><span class="n">squeeze</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Read the time slice and squeeze it out</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="o">=</span><span class="n">cdms2</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;clt.nc&quot;</span><span class="p">)</span>
+<span class="n">clt</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="s2">&quot;clt&quot;</span><span class="p">,</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">longitude</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">361</span><span class="p">),</span><span class="n">squeeze</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Read the time slice and squeeze it out</span>
 </pre></div>
 
     </div>
@@ -13660,7 +13565,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparing-the-vcs-objects">Preparing the vcs objects<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Preparing-the-vcs-objects">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Preparing-the-vcs-objects">Preparing the vcs objects<a class="anchor-link" href="#Preparing-the-vcs-objects">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13674,8 +13579,8 @@ div#notebook {
 <span class="n">x</span> <span class="o">=</span> <span class="n">vcs</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Create projection</span>
-<span class="n">polar</span> <span class="o">=</span> <span class="n">vcs</span><span class="o">.</span><span class="n">createprojection</span><span class="p">(</span><span class="s2">"rotate"</span><span class="p">)</span>
-<span class="n">polar</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s2">"orthographic"</span>
+<span class="n">polar</span> <span class="o">=</span> <span class="n">vcs</span><span class="o">.</span><span class="n">createprojection</span><span class="p">(</span><span class="s2">&quot;rotate&quot;</span><span class="p">)</span>
+<span class="n">polar</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s2">&quot;orthographic&quot;</span>
 <span class="n">polar</span><span class="o">.</span><span class="n">centerlongitude</span><span class="o">=</span><span class="mf">0.</span>
 <span class="n">polar</span><span class="o">.</span><span class="n">centerlatitude</span><span class="o">=</span><span class="mf">45.</span>
 
@@ -13695,7 +13600,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Preparing-the-images">Preparing the images<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Preparing-the-images">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Preparing-the-images">Preparing the images<a class="anchor-link" href="#Preparing-the-images">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13709,7 +13614,7 @@ div#notebook {
     <span class="n">polar</span><span class="o">.</span><span class="n">centerlongitude</span> <span class="o">=</span> <span class="n">centerLongitude</span>
     <span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">,</span><span class="n">iso</span><span class="p">)</span>
-    <span class="n">x</span><span class="o">.</span><span class="n">png</span><span class="p">(</span><span class="s2">"pngs/rotate_</span><span class="si">%s</span><span class="s2">.png"</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">centerLongitude</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">png</span><span class="p">(</span><span class="s2">&quot;pngs/rotate_</span><span class="si">%s</span><span class="s2">.png&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">centerLongitude</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13720,7 +13625,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Creating-the-animation">Creating the animation<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Creating-the-animation">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to top</a></p>
+<h2 id="Creating-the-animation">Creating the animation<a class="anchor-link" href="#Creating-the-animation">&#182;</a></h2><p><a href="#top">Back to top</a></p>
 
 </div>
 </div>
@@ -13730,11 +13635,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">"rot_animation.mp4"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;rot_animation.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"files used"</span><span class="p">,</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"pngs/rotate_*png"</span><span class="p">))</span>
-<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"pngs/rotate_*png"</span><span class="p">)),</span> <span class="n">rate</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;files used&quot;</span><span class="p">,</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/rotate_*png&quot;</span><span class="p">))</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/rotate_*png&quot;</span><span class="p">)),</span> <span class="n">rate</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13751,7 +13656,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>files used ['pngs/rotate_000215.png', 'pngs/rotate_000135.png', 'pngs/rotate_000350.png', 'pngs/rotate_000075.png', 'pngs/rotate_000065.png', 'pngs/rotate_000090.png', 'pngs/rotate_000290.png', 'pngs/rotate_000230.png', 'pngs/rotate_000260.png', 'pngs/rotate_000115.png', 'pngs/rotate_000050.png', 'pngs/rotate_000130.png', 'pngs/rotate_000040.png', 'pngs/rotate_000150.png', 'pngs/rotate_000035.png', 'pngs/rotate_000245.png', 'pngs/rotate_000330.png', 'pngs/rotate_000250.png', 'pngs/rotate_000185.png', 'pngs/rotate_000270.png', 'pngs/rotate_000010.png', 'pngs/rotate_000055.png', 'pngs/rotate_000285.png', 'pngs/rotate_000280.png', 'pngs/rotate_000180.png', 'pngs/rotate_000120.png', 'pngs/rotate_000200.png', 'pngs/rotate_000025.png', 'pngs/rotate_000085.png', 'pngs/rotate_000335.png', 'pngs/rotate_000320.png', 'pngs/rotate_000310.png', 'pngs/rotate_000015.png', 'pngs/rotate_000105.png', 'pngs/rotate_000220.png', 'pngs/rotate_000160.png', 'pngs/rotate_000295.png', 'pngs/rotate_000195.png', 'pngs/rotate_000210.png', 'pngs/rotate_000125.png', 'pngs/rotate_000300.png', 'pngs/rotate_000000.png', 'pngs/rotate_000255.png', 'pngs/rotate_000225.png', 'pngs/rotate_000170.png', 'pngs/rotate_000155.png', 'pngs/rotate_000175.png', 'pngs/rotate_000110.png', 'pngs/rotate_000165.png', 'pngs/rotate_000240.png', 'pngs/rotate_000100.png', 'pngs/rotate_000235.png', 'pngs/rotate_000145.png', 'pngs/rotate_000140.png', 'pngs/rotate_000325.png', 'pngs/rotate_000045.png', 'pngs/rotate_000205.png', 'pngs/rotate_000080.png', 'pngs/rotate_000005.png', 'pngs/rotate_000340.png', 'pngs/rotate_000190.png', 'pngs/rotate_000095.png', 'pngs/rotate_000070.png', 'pngs/rotate_000365.png', 'pngs/rotate_000345.png', 'pngs/rotate_000355.png', 'pngs/rotate_000265.png', 'pngs/rotate_000305.png', 'pngs/rotate_000030.png', 'pngs/rotate_000060.png', 'pngs/rotate_000275.png', 'pngs/rotate_000315.png', 'pngs/rotate_000360.png', 'pngs/rotate_000020.png']
+<pre>files used [&#39;pngs/rotate_000215.png&#39;, &#39;pngs/rotate_000135.png&#39;, &#39;pngs/rotate_000350.png&#39;, &#39;pngs/rotate_000075.png&#39;, &#39;pngs/rotate_000065.png&#39;, &#39;pngs/rotate_000090.png&#39;, &#39;pngs/rotate_000290.png&#39;, &#39;pngs/rotate_000230.png&#39;, &#39;pngs/rotate_000260.png&#39;, &#39;pngs/rotate_000115.png&#39;, &#39;pngs/rotate_000050.png&#39;, &#39;pngs/rotate_000130.png&#39;, &#39;pngs/rotate_000040.png&#39;, &#39;pngs/rotate_000150.png&#39;, &#39;pngs/rotate_000035.png&#39;, &#39;pngs/rotate_000245.png&#39;, &#39;pngs/rotate_000330.png&#39;, &#39;pngs/rotate_000250.png&#39;, &#39;pngs/rotate_000185.png&#39;, &#39;pngs/rotate_000270.png&#39;, &#39;pngs/rotate_000010.png&#39;, &#39;pngs/rotate_000055.png&#39;, &#39;pngs/rotate_000285.png&#39;, &#39;pngs/rotate_000280.png&#39;, &#39;pngs/rotate_000180.png&#39;, &#39;pngs/rotate_000120.png&#39;, &#39;pngs/rotate_000200.png&#39;, &#39;pngs/rotate_000025.png&#39;, &#39;pngs/rotate_000085.png&#39;, &#39;pngs/rotate_000335.png&#39;, &#39;pngs/rotate_000320.png&#39;, &#39;pngs/rotate_000310.png&#39;, &#39;pngs/rotate_000015.png&#39;, &#39;pngs/rotate_000105.png&#39;, &#39;pngs/rotate_000220.png&#39;, &#39;pngs/rotate_000160.png&#39;, &#39;pngs/rotate_000295.png&#39;, &#39;pngs/rotate_000195.png&#39;, &#39;pngs/rotate_000210.png&#39;, &#39;pngs/rotate_000125.png&#39;, &#39;pngs/rotate_000300.png&#39;, &#39;pngs/rotate_000000.png&#39;, &#39;pngs/rotate_000255.png&#39;, &#39;pngs/rotate_000225.png&#39;, &#39;pngs/rotate_000170.png&#39;, &#39;pngs/rotate_000155.png&#39;, &#39;pngs/rotate_000175.png&#39;, &#39;pngs/rotate_000110.png&#39;, &#39;pngs/rotate_000165.png&#39;, &#39;pngs/rotate_000240.png&#39;, &#39;pngs/rotate_000100.png&#39;, &#39;pngs/rotate_000235.png&#39;, &#39;pngs/rotate_000145.png&#39;, &#39;pngs/rotate_000140.png&#39;, &#39;pngs/rotate_000325.png&#39;, &#39;pngs/rotate_000045.png&#39;, &#39;pngs/rotate_000205.png&#39;, &#39;pngs/rotate_000080.png&#39;, &#39;pngs/rotate_000005.png&#39;, &#39;pngs/rotate_000340.png&#39;, &#39;pngs/rotate_000190.png&#39;, &#39;pngs/rotate_000095.png&#39;, &#39;pngs/rotate_000070.png&#39;, &#39;pngs/rotate_000365.png&#39;, &#39;pngs/rotate_000345.png&#39;, &#39;pngs/rotate_000355.png&#39;, &#39;pngs/rotate_000265.png&#39;, &#39;pngs/rotate_000305.png&#39;, &#39;pngs/rotate_000030.png&#39;, &#39;pngs/rotate_000060.png&#39;, &#39;pngs/rotate_000275.png&#39;, &#39;pngs/rotate_000315.png&#39;, &#39;pngs/rotate_000360.png&#39;, &#39;pngs/rotate_000020.png&#39;]
 </pre>
 </div>
 </div>
@@ -13763,8 +13668,8 @@ div#notebook {
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width="640" height="420" controls=""><source src="rot_animation.mp4" type="video/mp4">
-</video></div>
+<video width='640' height='420'controls><source src='rot_animation.mp4' type='video/mp4'>
+</div>
 
 </div>
 
@@ -13775,7 +13680,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Controlling">Controlling<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Controlling">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to Top</a></p>
+<h2 id="Controlling">Controlling<a class="anchor-link" href="#Controlling">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
 <p>But it is rotating <strong>THE WRONG WAY!!!*</strong></p>
 <p>Why?</p>
 <p>FFMPEG uses the images passed by the list in the order passed.</p>
@@ -13790,10 +13695,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">"rot_animation_correct_order.mp4"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;rot_animation_correct_order.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"pngs/rotate_*png"</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rate</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/rotate_*png&quot;</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rate</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13811,8 +13716,8 @@ div#notebook {
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width="640" height="420" controls=""><source src="rot_animation_correct_order.mp4" type="video/mp4">
-</video></div>
+<video width='640' height='420'controls><source src='rot_animation_correct_order.mp4' type='video/mp4'>
+</div>
 
 </div>
 
@@ -13823,7 +13728,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Animating-Globe-and-Data">Animating Globe and Data<a class="anchor-link" href="file:///home/nadeau1/Downloads/Animations.html#Animating-Globe-and-Data">¶</a></h2><p><a href="file:///home/nadeau1/Downloads/Animations.html#top">Back to Top</a></p>
+<h2 id="Animating-Globe-and-Data">Animating Globe and Data<a class="anchor-link" href="#Animating-Globe-and-Data">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
 
 </div>
 </div>
@@ -13834,12 +13739,12 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create pngs</span>
-<span class="n">clt</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="s2">"clt"</span><span class="p">,</span><span class="n">longitude</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">361</span><span class="p">))</span>
+<span class="n">clt</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="s2">&quot;clt&quot;</span><span class="p">,</span><span class="n">longitude</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">361</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">centerLongitude</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">361</span><span class="p">,</span><span class="mi">4</span><span class="p">)):</span>
     <span class="n">polar</span><span class="o">.</span><span class="n">centerlongitude</span> <span class="o">=</span> <span class="n">centerLongitude</span>
     <span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
     <span class="n">x</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clt</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">iso</span><span class="p">)</span>
-    <span class="n">x</span><span class="o">.</span><span class="n">png</span><span class="p">(</span><span class="s2">"pngs/all_</span><span class="si">%s</span><span class="s2">.png"</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">centerLongitude</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">png</span><span class="p">(</span><span class="s2">&quot;pngs/all_</span><span class="si">%s</span><span class="s2">.png&quot;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">centerLongitude</span><span class="p">)</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13852,10 +13757,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">"rot_animation_all.mp4"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;rot_animation_all.mp4&quot;</span>
 
 <span class="c1"># Create animation into file</span>
-<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"pngs/all_*png"</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rate</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">ffmpeg</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;pngs/all_*png&quot;</span><span class="p">))[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">rate</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13873,8 +13778,8 @@ div#notebook {
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<video width="640" height="420" controls=""><source src="rot_animation_all.mp4" type="video/mp4">
-</video></div>
+<video width='640' height='420'controls><source src='rot_animation_all.mp4' type='video/mp4'>
+</div>
 
 </div>
 
@@ -13884,10 +13789,9 @@ div#notebook {
 </div>
     </div>
   </div>
-
+</body>
 
  
 
 
-
-</body></html>
+</html>
