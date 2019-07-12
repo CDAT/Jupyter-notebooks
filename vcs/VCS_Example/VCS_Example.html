@@ -13116,7 +13116,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Basic-VCS-Tutorial-">Basic VCS Tutorial<a class="tocSkip" id="top"> </a><a class="anchor-link" href="#Basic-VCS-Tutorial-">&#182;</a></h1><p>The CDAT software was developed by LLNL. This tutorial was written by Charles Doutriaux. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.</p>
+<h1 id="VCS-Example-">VCS Example<a class="tocSkip" id="top"> </a><a class="anchor-link" href="#VCS-Example-">&#182;</a></h1><p>This tutorial provides an example, from start to finish, of downloading some data and plotting it.</p>
+<p>The CDAT software was developed by LLNL. This tutorial was written by Charles Doutriaux. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.</p>
 <p><a href="Basic_VCS_demo.ipynb">Download the Jupyter Notebook</a></p>
 
 </div>
@@ -13155,7 +13156,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Download some sample data</p>
+<p>Download some sample data.</p>
 
 </div>
 </div>
@@ -13182,9 +13183,63 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/th_yr.nc
+<pre>Downloading: &#39;BlueMarble.ppm&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/BlueMarble.ppm
+Downloading: &#39;clt.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/clt.nc
+Downloading: &#39;geo.1deg.ctl&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/geo.1deg.ctl
+Downloading: &#39;geo.1deg.gmp&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/geo.1deg.gmp
+Downloading: &#39;geo.1deg.grb&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/geo.1deg.grb
+Downloading: &#39;meshfill.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/meshfill.nc
+Downloading: &#39;navy_land.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/navy_land.nc
+Downloading: &#39;rlut_CERES_000001-000012_ac.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/rlut_CERES_000001-000012_ac.nc
+Downloading: &#39;sampleCurveGrid4.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/sampleCurveGrid4.nc
+Downloading: &#39;sampleGenGrid3.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/sampleGenGrid3.nc
+Downloading: &#39;sftbyrgn.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/sftbyrgn.nc
+Downloading: &#39;sftlf_10x10.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/sftlf_10x10.nc
+Downloading: &#39;sftlf_visus.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/sftlf_visus.nc
+Downloading: &#39;so_Omon_ACCESS1-0_historical_r1i1p1_185001-185412_2timesteps.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/so_Omon_ACCESS1-0_historical_r1i1p1_185001-185412_2timesteps.nc
+Downloading: &#39;so_Omon_GISS-E2-R_historicalNat_r5i1p1_185001-187512_2timesteps.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/so_Omon_GISS-E2-R_historicalNat_r5i1p1_185001-187512_2timesteps.nc
+Downloading: &#39;so_Omon_HadGEM2-CC_historical_r1i1p1_185912-186911_2timesteps.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/so_Omon_HadGEM2-CC_historical_r1i1p1_185912-186911_2timesteps.nc
+Downloading: &#39;so_Omon_MPI-ESM-LR_1pctCO2_r1i1p1_185001-185912_2timesteps.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/so_Omon_MPI-ESM-LR_1pctCO2_r1i1p1_185001-185912_2timesteps.nc
+Downloading: &#39;swan.four.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/swan.four.nc
+Downloading: &#39;ta_ncep_87-6-88-4.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/ta_ncep_87-6-88-4.nc
+Downloading: &#39;tas_ccsr-95a.xml&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_ccsr-95a.xml
+Downloading: &#39;tas_ccsr-95a_1979.01-1979.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_ccsr-95a_1979.01-1979.12.nc
+Downloading: &#39;tas_ccsr-95a_1980.01-1980.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_ccsr-95a_1980.01-1980.12.nc
+Downloading: &#39;tas_ccsr-95a_1981.01-1981.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_ccsr-95a_1981.01-1981.12.nc
+Downloading: &#39;tas_ccsr-95a_1982.01-1982.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_ccsr-95a_1982.01-1982.12.nc
+Downloading: &#39;tas_ccsr-95a_1983.01-1983.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_ccsr-95a_1983.01-1983.12.nc
+Downloading: &#39;tas_ccsr-95a_1984.01-1984.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_ccsr-95a_1984.01-1984.12.nc
+Downloading: &#39;sftlf_ccsr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/sftlf_ccsr.nc
+Downloading: &#39;tas_dnm-95a.xml&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_dnm-95a.xml
+Downloading: &#39;tas_dnm-95a_1979.01-1979.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_dnm-95a_1979.01-1979.12.nc
+Downloading: &#39;tas_dnm-95a_1980.01-1980.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_dnm-95a_1980.01-1980.12.nc
+Downloading: &#39;tas_dnm-95a_1981.01-1981.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_dnm-95a_1981.01-1981.12.nc
+Downloading: &#39;tas_dnm-95a_1982.01-1982.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_dnm-95a_1982.01-1982.12.nc
+Downloading: &#39;tas_dnm-95a_1983.01-1983.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_dnm-95a_1983.01-1983.12.nc
+Downloading: &#39;tas_dnm-95a_1984.01-1984.12.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_dnm-95a_1984.01-1984.12.nc
+Downloading: &#39;sftlf_dnm.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/sftlf_dnm.nc
+Downloading: &#39;taylor.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/taylor.nc
+Downloading: &#39;test_anim.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/test_anim.nc
+Downloading: &#39;test_col.asc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/test_col.asc
+Downloading: &#39;testgrib2.ctl&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/testgrib2.ctl
+Downloading: &#39;testgrib2.grib2&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/testgrib2.grib2
+Downloading: &#39;testgrib2.idx&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/testgrib2.idx
+Downloading: &#39;testpp.pp&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/testpp.pp
+Downloading: &#39;thermo.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/thermo.nc
+Downloading: &#39;vertical.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/vertical.nc
+Downloading: &#39;tas_ukmo_con.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_ukmo_con.nc
+Downloading: &#39;tas_gavg_rnl_ecm.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_gavg_rnl_ecm.nc
+Downloading: &#39;tas_ecm_1979.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_ecm_1979.nc
+Downloading: &#39;tas_cru_1979.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_cru_1979.nc
+Downloading: &#39;psl_6h.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/psl_6h.nc
+Downloading: &#39;ts_da.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/ts_da.nc
+Downloading: &#39;tas_mo.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_mo.nc
+Downloading: &#39;tas_mo_clim.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_mo_clim.nc
+Downloading: &#39;tas_6h.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/tas_6h.nc
 Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/th_yr.nc
 Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/th_yr.nc
+Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/th_yr.nc
+Downloading: &#39;geos5-sample.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data/&#39; in: /Users/davis278/miniconda3/envs/nightly_mesa/share/cdat/sample_data/geos5-sample.nc
 </pre>
 </div>
 </div>
@@ -13427,7 +13482,7 @@ Downloading: &#39;th_yr.nc&#39; from &#39;https://cdat.llnl.gov/cdat/sample_data
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>---------- Isofill (Gfi) member (attribute) listings ----------
 graphics method = Gfi
-name = __isofill_908445561178634
+name = __isofill_553868239436105
 projection = linear
 xticlabels1 = *
 xticlabels2 = *
@@ -13581,7 +13636,7 @@ legend =  None
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>---------- Template (P) member (attribute) listings ----------
 method = P
-name = __template_368390170835212
+name = __template_11726421044936
 orientation = 0
 member =  file
      priority = 1
@@ -13907,13 +13962,17 @@ member =  data
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The most commonly used elements/members are: dataname, title, mean, max, min, units, data, and legend.
--<code>data</code> controls the area where to plot the data.
--<code>legend</code> is the area used by the legend/colorbar.</p>
+<p>The most commonly used elements/members are: dataname, title, mean, max, min, units, data, and legend.</p>
+<ul>
+<li><code>data</code> controls the area where to plot the data.</li>
+<li><code>legend</code> is the area used by the legend/colorbar.</li>
+</ul>
 <p>The values come from the data plotted.</p>
-<p>Most common attributes are:
--x/y coordinate are in % of page.
--<code>priority</code> is the order of drawing with 2 drawing above 1 and 3 drawing above 2. A value of 0 turns the priority value off.</p>
+<p>Most common attributes are:</p>
+<ul>
+<li>x/y coordinate are in % of page.</li>
+<li><code>priority</code> is the order of drawing with 2 drawing above 1 and 3 drawing above 2. A value of 0 turns the priority value off.</li>
+</ul>
 <p>See below for more information on <a href="../VCS_Text_Objects/VCS_Text_Objects.ipynb">text objects</a>, but they are basically controlled via <code>textorientation</code> and <code>texttable</code> objects properties.</p>
 
 </div>
@@ -13965,7 +14024,7 @@ member =  data
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's preserve the aspect ratio</p>
+<p>Let's preserve the aspect ratio.</p>
 
 </div>
 </div>
