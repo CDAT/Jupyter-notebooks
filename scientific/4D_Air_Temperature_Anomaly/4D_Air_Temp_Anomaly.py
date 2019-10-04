@@ -3,13 +3,13 @@
 
 # # 4D Air Temperature Anomaly
 # 
-# This turorial illustrates using VCS and DV3D (two CDAT tools) to plot three dimensional air temperature anomaly data through time (the 4th dimension).
+# This tutorial illustrates using VCS and DV3D (two CDAT tools) to plot three dimensional air temperature anomaly data through time (the 4th dimension).
 # 
 # The most direct way to work with this Jupyter Notebook is to download the notebook by right clicking on the link below and chosing **"Download linked file as"**, activating a CDAT + jupyter compatible environment, and running the notebook on its own or within a Jupyter Lab interface. If you'd like more explanation than this, see the Getting Started section below.
 # 
 # If you are unfamiliar with Jupyter Notebooks, they are files with an .ipynb extension that are made up of cells that can include executable code or regular text to explain what the code is doing. From [Jupyter.org](https://jupyter.org/) "The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text." Users can step through each cell in the notebook by putting their cursor in the cell they wish to run and either clicking on the "Run" button at the top of the page or pressing enter on the keyboard while holding down shift at the same time (shift-enter).
 # 
-# [Download the Jupyter Notebook](https://cdat.llnl.gov/Jupyter-notebooks/scientific/4D_Air_Temperature_Anomaly/4D_Air_Temp_Anomaly.ipynb). Use right click & "Download linked file as". The resulting file should have an .ipynb extension.
+# To [download this Jupyter Notebook](https://cdat.llnl.gov/Jupyter-notebooks/scientific/4D_Air_Temperature_Anomaly/4D_Air_Temp_Anomaly.ipynb) right click on the link and choose "Download Linked File As..." or "Save Link as...". Remember where you saved the downloaded file, which should have an .ipynb extension. (You'll need to launch the Jupyter notebook or JupyterLab instance from the location where you store the notebook file.)
 # 
 # [Download the Python file](https://cdat.llnl.gov/Jupyter-notebooks/scientific/4D_Air_Temperature_Anomaly/4D_Air_Temp_Anomaly.py) if you prefer to run the code below directly in Python without a Jupyter Notebook or JupyterLab interface.
 
@@ -242,6 +242,8 @@ vcs.minmax(v)
 # ## Create the 3D plot
 
 # The next two lines of code are useful if you want to test that the plotting capability is working without creating a full sequence of .png files or the animation at the end. They are intended to be used when stepping through the notebook or python code one line at a time after the "#" is removed to turn them into lines of code instead of comments.
+# 
+# Note: when you run a line of code with `x.plot( thing_to_plot, dv3d )`, you can safely ignore the "can't open data file 'None'" warning.
 
 # In[16]:
 
@@ -282,7 +284,7 @@ pngs = sorted(glob.glob("anomaly_time_*.png"))
 x.ffmpeg("anomaly_animation.mp4", pngs, bitrate=1024, rate=None, options=None)
 
 
-# If you want to save a python script from this notebook to run outside the notebook (so you can interact with the 3D plot), save the script then delete the "#" in the line above to turn it from a comment to an active line of code.
+# If you want to save a python script from this notebook to run outside the notebook (so you can interact with the 3D plot), save the script then delete the "#" in the line below to turn it from a comment to an active line of code.
 
 # In[20]:
 
@@ -290,6 +292,6 @@ x.ffmpeg("anomaly_animation.mp4", pngs, bitrate=1024, rate=None, options=None)
 x.interact()
 
 
-# The CDAT software was developed by LLNL. This notebook was created by Holly Davis on June 27, 2019, updated on July 19, 2019, and is based on other CDAT notebooks created by Charles Doutriaux. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.
+# The CDAT software was developed by LLNL. This notebook was created by Holly Davis on June 27, 2019, updated on October 3, 2019, and is based on other CDAT notebooks created by Charles Doutriaux. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.
 # 
-# If you have questions about this notebook, please email [CDAT Support](cdat-support@llnl.gov).
+# If you have questions about this notebook, please email our [CDAT Support](cdat-support@llnl.gov) address, cdat-support@llnl.gov.
