@@ -3,13 +3,15 @@
 
 # # 4D Air Temperature Anomaly - 1920 x 1080 Size
 # 
-# This turorial illustrates using VCS and DV3D (two CDAT tools) to plot three dimensional air temperature anomaly data through time (the 4th dimension).
+# This tutorial illustrates using VCS and DV3D (two CDAT tools) to plot three dimensional air temperature anomaly data through time (the 4th dimension). This notebook differs from the "4D Air Temperature Anomaly" notebook in that it creates a video of the anomaly through time in a size that matches YouTube's preferred default size of 1920 pixels by 1080 pixels as opposed to the smaller 814 px by 606 px of the "4D Air Temperature Anomaly" notebook.
 # 
-# [Download the Jupyter Notebook](https://cdat.llnl.gov/Jupyter-notebooks/scientific/4D_Air_Temperature_Anomaly/4D_Air_Temp_Anomaly_1920x1080.ipynb)
+# The most direct way to work with this Jupyter Notebook is to download the notebook by right clicking on the link below and chosing **"Download linked file as"**, activating a CDAT + jupyter compatible environment, and running the notebook on its own or within a Jupyter Lab interface. If you'd like more explanation than this, see the Getting Started section below.
+# 
+# If you are unfamiliar with Jupyter Notebooks, they are files with an .ipynb extension that are made up of cells that can include executable code or regular text to explain what the code is doing. From [Jupyter.org](https://jupyter.org/) "The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text." Users can step through each cell in the notebook by putting their cursor in the cell they wish to run and either clicking on the "Run" button at the top of the page or pressing enter on the keyboard while holding down shift at the same time (shift-enter).
+# 
+# To [download this Jupyter Notebook](https://cdat.llnl.gov/Jupyter-notebooks/scientific/4D_Air_Temperature_Anomaly/4D_Air_Temp_Anomaly_1920x1080.ipynb) right click on the link and choose "Download Linked File As..." or "Save Link as...". Remember where you saved the downloaded file, which should have an .ipynb extension. (You'll need to launch the Jupyter notebook or JupyterLab instance from the location where you store the notebook file.)
 # 
 # [Download the Python file](https://cdat.llnl.gov/Jupyter-notebooks/scientific/4D_Air_Temperature_Anomaly/4D_Air_Temp_Anomaly_1920x1080.py)
-# 
-# The CDAT software was developed by LLNL and this notebook was created and the example code was updated on June 27, 2019. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.
 
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
 # <div class="toc"><ul class="toc-item"><li><span><a href="#Getting-Started" data-toc-modified-id="Getting-Started-1">Getting Started</a></span><ul class="toc-item"><li><span><a href="#Conda-Installation" data-toc-modified-id="Conda-Installation-1.1">Conda Installation</a></span></li><li><span><a href="#Create-CDAT-Compatible-Environment" data-toc-modified-id="Create-CDAT-Compatible-Environment-1.2">Create CDAT Compatible Environment</a></span><ul class="toc-item"><li><span><a href="#For-CDAT:" data-toc-modified-id="For-CDAT:-1.2.1">For CDAT:</a></span></li><li><span><a href="#For-VCDAT-and-the-jupyter-vcdat-environment:" data-toc-modified-id="For-VCDAT-and-the-jupyter-vcdat-environment:-1.2.2">For VCDAT and the jupyter-vcdat environment:</a></span></li></ul></li><li><span><a href="#Start-JupyterLab" data-toc-modified-id="Start-JupyterLab-1.3">Start JupyterLab</a></span></li></ul></li><li><span><a href="#To-Interact-with-the-3D-image..." data-toc-modified-id="To-Interact-with-the-3D-image...-2">To Interact with the 3D image...</a></span></li><li><span><a href="#Import-the-Necessary-Python-Modules" data-toc-modified-id="Import-the-Necessary-Python-Modules-3">Import the Necessary Python Modules</a></span></li><li><span><a href="#Get-the-Tutorial-Data" data-toc-modified-id="Get-the-Tutorial-Data-4">Get the Tutorial Data</a></span></li><li><span><a href="#Open-the-sample-data-file" data-toc-modified-id="Open-the-sample-data-file-5">Open the sample data file</a></span></li><li><span><a href="#Initialize-the-VCS-canvas" data-toc-modified-id="Initialize-the-VCS-canvas-6">Initialize the VCS canvas</a></span></li><li><span><a href="#Set-DV3D-settings" data-toc-modified-id="Set-DV3D-settings-7">Set DV3D settings</a></span><ul class="toc-item"><li><span><a href="#Choose-variable-to-plot" data-toc-modified-id="Choose-variable-to-plot-7.1">Choose variable to plot</a></span></li><li><span><a href="#Calculate-Average/Mean-Temperature" data-toc-modified-id="Calculate-Average/Mean-Temperature-7.2">Calculate Average/Mean Temperature</a></span></li><li><span><a href="#Create-Matricies-Needed-to-Calculate-the-Temperature-Anomaly" data-toc-modified-id="Create-Matricies-Needed-to-Calculate-the-Temperature-Anomaly-7.3">Create Matricies Needed to Calculate the Temperature Anomaly</a></span></li><li><span><a href="#Calculate-3D-Temperature-Anomaly" data-toc-modified-id="Calculate-3D-Temperature-Anomaly-7.4">Calculate 3D Temperature Anomaly</a></span></li></ul></li><li><span><a href="#Create-the-3D-plot" data-toc-modified-id="Create-the-3D-plot-8">Create the 3D plot</a></span></li><li><span><a href="#Create-the-Animation" data-toc-modified-id="Create-the-Animation-9">Create the Animation</a></span></li></ul></div>
@@ -20,7 +22,7 @@
 # 
 # If you only have Python 2 installed, the code *should* still work in Python 2, but if it doesn't, isn't this a good time to join the Python 3 crowd? The instructions below make it relatively painless to install a Python 3 environment. 
 # 
-# For the code in this notebook or the stand-alone python script to work, you need to install a **CDAT compatible environment**. See the next cell in the notebook for details on how to create an appropriate environment and activate it. If you see three grey dots, that cell has been hidden. Just click on the dots to see the contents of the cell. (To hide the cell, click on the vertical blue bar to the left of the cell in JupyterLab.)
+# For the code in this notebook or the stand-alone python script to work, you need to install a **CDAT compatible environment**. See the next cell in the notebook for details on how to create an appropriate environment and activate it. If you see three grey dots, that cell has been hidden. Just click on the dots to see the contents of the cell. (To hide the cell in JupyterLab, click on the vertical blue bar to the left of the cell.)
 
 # ### Conda Installation
 # We recommend using conda to install and manage environments. Conda itself can be installed either via [Anaconda](https://www.anaconda.com/) (the everything-but-the-kitchen-sink version) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) (the minimalist version). 
@@ -227,13 +229,15 @@ v = v01 - va1
 v.shape
 
 
+# To create a nice-looking plot, we'll want the colors to cover the full range of the data so we get the minimum and maximum values using the `.minmax` method.
+
 # In[15]:
 
 
 vcs.minmax(v)
 
 
-# Modify the ScaleColormap to cover the min and max values of the data. If you'd like the program to create the plot based on the data without your specifying the temperature range the ScaleColormap and ScaleTransferFunction methods should use, comment out the following three lines of code.
+# The middle line below specifies the ScaleColormap to cover the min and max values of the data. If you'd like the program to create the plot based on the data without your specifying the temperature range for the ScaleColormap and ScaleTransferFunction methods, comment out the following three lines of code as we have done here.
 
 # In[16]:
 
@@ -246,6 +250,8 @@ vcs.minmax(v)
 # ## Create the 3D plot
 
 # The next two lines of code are useful if you want to test that the plotting capability is working without creating a full sequence of .png files or the animation at the end. They are intended to be used when stepping through the notebook or python code one line at a time after the "#" is removed to turn them into lines of code instead of comments.
+# 
+# Note: when you run a line of code with `x.plot( thing_to_plot, dv3d )`, you can safely ignore the "can't open data file 'None'" warning.
 
 # In[17]:
 
@@ -286,10 +292,14 @@ pngs = sorted(glob.glob("anomaly_time_*.png"))
 x.ffmpeg("anomaly_anim_1920x1080.mp4", pngs, bitrate=1024, rate=None, options=None)
 
 
-# If you want to save a python script from this notebook to run outside the notebook (so you can interact with the 3D plot), save the script then delete the "#" in the line above to turn it from a comment to an active line of code.
+# If you want to save a python script from this notebook to run outside the notebook (so you can interact with the 3D plot), save the script then delete the "#" in the line below to turn it from a comment to an active line of code.
 
 # In[21]:
 
 
 x.interact()
 
+
+# The CDAT software was developed by LLNL. This notebook was created by Holly Davis on June 27, 2019, updated on October 3, 2019, and is based on other CDAT notebooks created by Charles Doutriaux. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.
+# 
+# If you have questions about this notebook, please email our [CDAT Support](cdat-support@llnl.gov) address, cdat-support@llnl.gov.
