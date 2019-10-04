@@ -3,9 +3,9 @@
 
 # # VCS 3D Temperature Anomaly
 # 
-# This turorial illustrates using VCS (a CDAT tool) to plot a three dimensional temperature anomaly.
+# This tutorial illustrates using VCS (a CDAT tool) to plot a three-dimensional temperature anomaly.
 # 
-# [Download the Jupyter Notebook](https://cdat.llnl.gov/Jupyter-notebooks/scientific/3D_Temperature_Anomaly/3D_Temp_Anomaly.ipynb)
+# To [download this Jupyter Notebook](https://cdat.llnl.gov/Jupyter-notebooks/scientific/3D_Temperature_Anomaly/3D_Temp_Anomaly.ipynb), right click on the link and choose "Download Linked File As..." or "Save Link as...". Remember where you saved the downloaded file, which should have an .ipynb extension. (You'll need to launch the Jupyter notebook or JupyterLab instance from the location where you store the notebook file.)
 # 
 # [Download the Python file](https://cdat.llnl.gov/Jupyter-notebooks/scientific/3D_Temperature_Anomaly/3D_Temp_Anomaly.py)
 # 
