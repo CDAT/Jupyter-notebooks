@@ -33,7 +33,7 @@
 # 
 # A separate window should open where you can adjust the sliders and click on the "Configure" button to access more features of the plot. Click and drag on the center of the plot to change the angle at which you are viewing the data.
 # 
-# To exit the interactive mode, close the window and type control-D within your command line window fully exit the interactive mode and to get your command prompt back. (If for some reason control-D does not work, try control-Z.)
+# To exit the interactive mode, close the window and type control-D within your command line window to fully exit the interactive mode and to get your command prompt back. (If for some reason control-D does not work, try control-Z.)
 # 
 # An alternate work flow is to accomplish all the steps above in a command line window without using JupyterLab or the Jupyter Notebook.
 
@@ -149,7 +149,7 @@ x.interact()
 
 
 # ## Save a 2D image of the 3D plot
-# When working inside a notebook, saving the above image to a separte .png file could be useful if you want to look at the image outside of the notebook. The line of code below will save the plot to a .png file in the same directory as this notebook. 
+# When working inside a notebook, saving the above image to a separate .png file could be useful if you want to look at the image outside of the notebook. The line of code below will save the plot to a .png file in the same directory as this notebook. 
 # 
 # If running the code in this notebook from the corresponding Python script, comment out or delete the following line of code since in the direct Python interface, saving to a .png file results in an all black .png file. If you want a 2D image of a particular view you've created while interacting with the 3D image, we recommend taking a screenshot.
 
