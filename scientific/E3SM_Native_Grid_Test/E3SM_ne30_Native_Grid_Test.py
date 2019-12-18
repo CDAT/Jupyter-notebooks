@@ -48,7 +48,7 @@ import vcs, cdms2, sys
 # 
 # The data file for this tutorial is "20180129.DECKv1b_piControl.ne30_oEC.edison.cam.h0.0500-01.nc" from the CMIP6 standard resolution (ne30) piControl run. 
 # 
-# The grid file used is "ne30np4_latlon.091226.nc". To download this grid file, go to https://portal.nersc.gov/project/acme/hdavis/ and click on the "ne30np4_latlon.091226.nc" file whcih should automatically download via your browser. To facilitate running this notebook, the CMIP6 data file can also be downloaded from this same location.
+# The grid file used is "ne30np4_latlon.091226.nc". To download this grid file, go to https://portal.nersc.gov/project/acme/hdavis/ and click on the "ne30np4_latlon.091226.nc" file which should automatically download via your browser. To facilitate running this notebook, the CMIP6 data file can also be downloaded from this same location.
 # 
 # Make sure both the data file and the grid file are in the same directory as this notebook before proceeding with running the notebook.
 
