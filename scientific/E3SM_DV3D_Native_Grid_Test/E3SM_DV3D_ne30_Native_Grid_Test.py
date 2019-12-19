@@ -3,7 +3,7 @@
 
 # # E3SM DV3D ne30 Native Grid Test
 # 
-# This tutorial focuses on using DV3D, a CDAT tool, to create a 3D plot of temperature data on E3SM's ne30 native grid. When the code in this notebook is run as a separate Python script (with minor modifications), DV3D allows users to interact with the 3D plot that opens in a stand-alone window on your computer.
+# This tutorial focuses on using DV3D, a CDAT tool, to create a 3D plot of temperature data on E3SM's ne30 native grid. When the code in this notebook is run as a separate Python script (with minor modifications), DV3D allows users to interact with the 3D plot that opens in a stand-alone window on their computer.
 # 
 # [Download the Jupyter Notebook](https://cdat.llnl.gov/Jupyter-notebooks/scientific/E3SM_DV3D_ne30_Native_Grid_Test/E3SM_DV3D_ne30_Native_Grid_Test.ipynb)
 # 
@@ -48,12 +48,12 @@ import vcs, cdms2, sys
 # 
 # The data file for this tutorial is "20180129.DECKv1b_piControl.ne30_oEC.edison.cam.h0.0500-01.nc" from the CMIP6 standard resolution (ne30) piControl run. 
 # 
-# The grid file used is "ne30np4_latlon.091226.nc". To download this grid file, go to https://portal.nersc.gov/project/acme/hdavis/ and click on the "ne30np4_latlon.091226.nc" file whcih should automatically download via your browser. To facilitate running this notebook, the CMIP6 data file can also be downloaded from this same location.
+# The grid file used is "ne30np4_latlon.091226.nc". To download this grid file, go to https://portal.nersc.gov/project/acme/hdavis/ and click on the "ne30np4_latlon.091226.nc" file which should automatically download via your browser. To facilitate running this notebook, the CMIP6 data file can also be downloaded from this same location.
 # 
-# Make sure both the data file and the grid file are in the same directory as this notebook before proceeding with running the notebook.
+# Make sure both the data file and the grid file are in the same directory as this notebook before continuing to run this notebook.
 
 # ## Open the CMIP6 data file
-# The variable "f" (for file) references the data file.
+# The variable `f` (for file) references the data file.
 
 # In[2]:
 
@@ -62,7 +62,7 @@ f=cdms2.open("20180129.DECKv1b_piControl.ne30_oEC.edison.cam.h0.0500-01.nc")
 
 
 # ## Initialize the VCS canvas
-# In this example the variable "x" is the VCS canvas.
+# In this example the variable `x` is the VCS canvas.
 
 # In[3]:
 
@@ -101,7 +101,7 @@ dv3d.Camera={'Position': (-161, -171, 279), 'ViewUp': (.29, 0.67, 0.68), 'FocalP
 print(sorted(f.variables.keys()))
 
 
-# The variable we'll plot in this tutorial is temperature, T which is in degrees Kelvin. The next line assigns the temperature data (T) to the "v" variable.
+# The variable we'll plot in this tutorial is temperature, T which is in degrees Kelvin. The next line assigns the temperature data (T) to the `v` variable.
 
 # In[8]:
 
@@ -159,6 +159,6 @@ x.interact()
 #x.png("native_T_sphere.png")
 
 
-# The CDAT software was developed by LLNL. This tutorial was written by Denis Nadeau. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.
+# The CDAT software was developed by LLNL. This tutorial was written by Charles Doutriaux and Holly Davis. This work was performed under the auspices of the U.S. Department of Energy by Lawrence Livermore National Laboratory under Contract DE-AC52-07NA27344.
 # 
 # If you have questions about this notebook, please email our [CDAT Support](cdat-support@llnl.gov) address, cdat-support@llnl.gov.
