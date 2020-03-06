@@ -13121,9 +13121,11 @@ div#notebook {
 <hr>
 <p>This tutorial shows how to use <a href="https://cdat.llnl.gov">CDAT</a> to remove the climatological mean annual cycle and detrend data - a common procedure applied prior to detailed climate data analysis of monthly anomalies.</p>
 <p>The data considered in this notebook are monthly-mean surface air temperatures gridded over the United States and spanning the years 1850 - 1990. The original dataset is complete, but it is artificially modified in this notebook by "masking" some values, yielding an incomplete dataset with some values "missing" (as is often encountered in analysis of climate data). The analysis procedure involves three major steps:</p>
-<p>1) Remove the climatological annual cycle yielding monthly-mean departures
-2) Spatially average over the domain.
-3) Remove the time-mean and the linear trend.</p>
+<ol>
+<li>Remove the climatological annual cycle yielding monthly-mean departures.</li>
+<li>Spatially average over the domain.</li>
+<li>Remove the time-mean and the linear trend.</li>
+</ol>
 <p>When there are missing values in the dataset (as in the sample calculations below), the final detrended time-series will depend on the order in which these steps are executed.  Here we examine options for detrending the data, and we show that slightly different results are generated depending on the order in which operations are performed.  More sophisticated treatments (not discussed here) involving appropriately weighting samples and collections of samples should be considered for datasets that only sparsely cover the time and space domains.</p>
 <p>To <a href="Detrend_data.ipynb">download this Jupyter Notebook</a>, right click on the link and choose "Download Linked File As..." or "Save Link as...". Remember where you saved the downloaded file, which should have an .ipynb extension. (You'll need to launch the Jupyter notebook or JupyterLab instance from the location where you store the notebook file.)</p>
 
@@ -13267,7 +13269,7 @@ standard_name: air_temperature
 cell_methods: time: mean (interval: 30 minutes)
 cell_measures: area: areacella
 history: 2011-03-07T11:45:34Z altered by CMOR: Treated scalar dimension: &#39;height&#39;. 2011-03-07T11:45:34Z altered by CMOR: replaced missing value flag (9.96921e+36) with standard missing value (1e+20). 2011-03-07T11:45:34Z altered by CMOR: Inverted axis: lat.
-Grid has Python id 0x120543c88.
+Grid has Python id 0x123878518.
 Gridtype: generic
 Grid shape: (13, 16)
 Order: yx
@@ -13284,7 +13286,7 @@ Order: yx
       realtopology: linear
       long_name: time
       standard_name: time
-   Python id:  0x12054b6d8
+   Python id:  0x123427978
 ** Dimension 2 **
    id: lat
    Designated a latitude axis.
@@ -13297,7 +13299,7 @@ Order: yx
       realtopology: linear
       long_name: latitude
       standard_name: latitude
-   Python id:  0x120543ac8
+   Python id:  0x123427208
 ** Dimension 3 **
    id: lon
    Designated a longitude axis.
@@ -13312,7 +13314,7 @@ Order: yx
       realtopology: circular
       long_name: longitude
       standard_name: longitude
-   Python id:  0x104480cc0
+   Python id:  0x123427ef0
 *** End of description for tas ***
 </pre>
 </div>
@@ -13389,7 +13391,7 @@ Order: yx
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the cell above, we have specified that averaging over the longitude and latitude dimensions (x and y) should be performed by weighting by grid-cell area. Note that the "combinewts" option must also be included for correct area-weighting.</p>
+<p>In the cell above, we have specified that averaging over the longitude and latitude dimensions (x and y) should be performed by weighting by grid-cell area. Note that the "combinewts" option should also be included for correct area-weighting.</p>
 
 </div>
 </div>
@@ -13502,7 +13504,7 @@ Order: yx
 </tr>
 </tbody>
 </table>
-<p>Creating this dataset using a numpy array we have:</p>
+<p>Creating this dataset using a numpy array and using 999 where no values exist yields:</p>
 
 </div>
 </div>
@@ -13834,7 +13836,7 @@ Order: yx
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Removing-the-Climatological-Annual-Cycle">Removing the Climatological Annual Cycle<a class="anchor-link" href="#Removing-the-Climatological-Annual-Cycle">&#182;</a></h2><p><a href="#top">Back to Top</a></p>
 <p>Before detrending a time series, it is often best to filter it by removing the climatological mean annual cycle; in fact, this may be a requirement for particular types of analyses. In the case of a time series that does not span an integral/non-fractional representative number of years, an accurate determination of the trend of interest may require removal of the climatological mean annual cycle. To see why, consider a temperature time series starting in January and ending in July a year and a half later (i.e., <em>not</em> an integral number of years). Over Northern Hemisphere continents with a large annual cycle, the ending temperature would be much higher than the beginning temperature simply due to the usual seasonal changes in temperature. A linear fit to the time-series would result in a trend that would not reflect any real change in climate but just the particulars of the time period treated. To avoid such artificial trends, one should first remove the climatological annual cycle.</p>
-<p>The surface temperature data considered earlier has no missing data, but more often than not observational data sets are incomplete. For purposes of illustration, we therefore will first modify the original surface temperature dataset by designating certain values as "missing". Specifically, we'll treat as "missing" (i.e., delete or mask) all data values that are within 7 degrees of the maximum temperature (<code>data.max()-7</code>) and store the result in <code>datamskd</code>.</p>
+<p>The surface temperature data considered earlier has no missing data, but more often than not observational datasets are incomplete. For purposes of illustration, we therefore will first modify the original surface temperature dataset by designating certain values as "missing". Specifically, we'll treat as "missing" (i.e., delete or mask) all data values that are within 7 degrees of the maximum temperature (<code>data.max()-7</code>) and store the result in <code>datamskd</code>.</p>
 
 </div>
 </div>
@@ -13878,7 +13880,7 @@ Order: yx
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We now consider what order to carry out the two-step operation needed to remove the climatological mean annual cycle:</p>
 <ol>
-<li>Remove the climatological annual cycle yielding monthly-mean departures</li>
+<li>Remove the climatological annual cycle yielding monthly-mean departures.</li>
 <li>Spatially average over the domain.</li>
 </ol>
 <p>We examine the two ordering options, with steps performed in the order shown above and then in the reverse order.</p>
@@ -14064,7 +14066,7 @@ Order: yx
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The next line formats the monthly mean anomaly data to show 5 digits after the decimal point.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Format the monthly mean anomaly data to show 5 digits after the decimal point.</span>
 <span class="n">numpy</span><span class="o">.</span><span class="n">set_printoptions</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">formatter</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;float&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{: 0.5f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">})</span>
 </pre></div>
 
@@ -14795,7 +14797,7 @@ Order: yx
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Consider-Two-Options">Consider Two Options<a class="anchor-link" href="#Consider-Two-Options">&#182;</a></h2><p>Starting with the modified temperature dataset that includes "missing" values, we shall again consider how the order of operations affects the result of removing the trend.  <strong>Under both options below, the first step is to remove the climatological mean annual cycle from the time series of each grid cell (obtaining <code>datamskd_departures</code>), as was done in the first step performed under Option 1 above.</strong>  Then we must decide which of the following processing procedures is most appropriate for a particular application:</p>
+<h2 id="Consider-Two-Options">Consider Two Options<a class="anchor-link" href="#Consider-Two-Options">&#182;</a></h2><p>Starting with the modified temperature dataset that includes "missing" values, we will again consider how the order of operations affects the result of removing the trend.  <strong>Under both options below, the first step is to remove the climatological mean annual cycle from the time series of each grid cell (obtaining <code>datamskd_departures</code>), as was done in the first step performed under Option 1 above.</strong>  Then we must decide which of the following processing procedures is most appropriate for a particular application:</p>
 <ul>
 <li>Processing Option A: Spatially average the anomaly fields over the domain and remove the trend from the resulting time-series.</li>
 <li>Processing Option B: Remove the trend from the anomaly time series at each grid cell and then spatially average the results.</li>
@@ -14808,7 +14810,7 @@ Order: yx
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Processing-Option-A:---Spatially-average-the-anomaly-fields-over-the-domain,-then-remove-the-trend-from-the-resulting-time-series.">Processing Option A:   Spatially average the anomaly fields over the domain, then remove the trend from the resulting time-series.<a class="anchor-link" href="#Processing-Option-A:---Spatially-average-the-anomaly-fields-over-the-domain,-then-remove-the-trend-from-the-resulting-time-series.">&#182;</a></h3><p>We begin by executing all the steps under Option 1 above to obtain: <code>datamskd_departures_ts_corrected</code>. Now to detrend this anomaly time series, we must obtain the regression coefficients (slope and intercept) and then subtract the fitted linear trend from the original anomaly time series. We first apply a function to calculate the slope and intercept (with each month given equal weighting in the regression fit):</p>
+<h3 id="Processing-Option-A:---Spatially-average-the-anomaly-fields-over-the-domain,-then-remove-the-trend-from-the-resulting-time-series.">Processing Option A:   Spatially average the anomaly fields over the domain, then remove the trend from the resulting time-series.<a class="anchor-link" href="#Processing-Option-A:---Spatially-average-the-anomaly-fields-over-the-domain,-then-remove-the-trend-from-the-resulting-time-series.">&#182;</a></h3><p>We begin by executing all the steps under Option 1 above to obtain <code>datamskd_departures_ts_corrected</code>. Now to detrend this anomaly time series, we must obtain the regression coefficients (slope and intercept) and then subtract the fitted linear trend from the original anomaly time series. We first apply a function to calculate the slope and intercept (with each month given equal weighting in the regression fit):</p>
 
 </div>
 </div>
@@ -15425,7 +15427,7 @@ Shape: intercept_full (1680, 13, 16)
 <p>As in the removal of the climatological mean annual cycle, the best way to remedy this would be to appropriately weight values contributing to the area mean, but a simple alternative is to modify the final time series by removing the residual trend and mean. We'll accomplish this by executing the following two steps:</p>
 <ol>
 <li>Compute regression coefficients (slope and intercept) of <code>datamskd_departures_detrend_ts</code></li>
-<li>Subtract regression line from <code>datamskd_departures_detrend_ts</code>. </li>
+<li>Subtract the regression line from <code>datamskd_departures_detrend_ts</code>. </li>
 </ol>
 
 </div>
@@ -15492,6 +15494,38 @@ Shape: intercept_full (1680, 13, 16)
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">datamskd_departures_detrend_ts_corrected</span><span class="p">))</span>
+<span class="c1">#print(&quot;{0:.5f}&quot;.format(numpy.mean(datamskd_departures_detrend_ts_corrected)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>-1.6917684184764292e-17
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -15502,7 +15536,7 @@ Shape: intercept_full (1680, 13, 16)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
@@ -15519,7 +15553,7 @@ Shape: intercept_full (1680, 13, 16)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[58]:</div>
+    <div class="prompt output_prompt">Out[59]:</div>
 
 
 
@@ -15540,7 +15574,8 @@ Shape: intercept_full (1680, 13, 16)
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Although the differences in the time-series produced by Options A &amp; B are mostly much smaller than 0.1 K and an order of magnitude smaller than the anomalies themselves, these differences might nevertheless be important (and could be much larger if larger amounts of data were missing or masked). Which option, then, is to be preferred? The answer is not obvious. Some idealized (and possibly extreme) cases should be analyzed in the context of a particular analysis to determine which might be more appropriate.</p>
-<p>One final note:  there may be better options for detrending data when there are differences in the trend that depend on time of year. Consider, for example, data with large positive trends in the cooler half of the year and large negative trends during the warmer half of the year, such that the trend considering all months of the year together is zero. Detrending this data following the two approaches above will not modify it at all; the trends for the warm part of the year will remain, as will those in the cold half of the year. If one is interested in the shorter term interannual variability, one might want to remove these seasonally dependent trends. One might, for example, extract all the January's and detrend them, and do the same for each subsequent month. Then the anomalies could be reassembled to cover the full time series, and the trends would also have been moved in both the warmer and cooler times of year.</p>
+<p>One final note:  there may be better options for detrending data when there are differences in the trend that depend on time of year. Consider, for example, data with large positive trends in the cooler half of the year and large negative trends during the warmer half of the year, such that the trend considering all months of the year together is zero. Detrending this data following the two approaches above will not modify it at all; the trends for the warm part of the year will remain, as will those in the cold half of the year. If one is interested in the shorter term interannual variability, one might want to remove these seasonally dependent trends. One might, for example, extract all the January's and detrend them, and do the same for each subsequent month. Then the anomalies could be reassembled to cover the full time series, and the trends would also have been removed in both the warmer and cooler times of year.</p>
+<hr>
 
 </div>
 </div>
